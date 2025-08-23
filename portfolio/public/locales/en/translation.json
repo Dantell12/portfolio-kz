@@ -1,0 +1,160 @@
+{
+  "---HEADER---": "",
+  "home": "Home",
+  "about": "About",
+  "certif": "Certifications",
+  "skls": "Skills",
+  "proy": "Projects",
+  "experiences": "Experience",
+  "contact": "Contact",
+  "education": "Education",
+
+  "---FOOTER---": "",
+  "footerdesc": "Passionate about creating projects and bringing ideas to life with code",
+  "footerwork": "Available for work",
+  "footerprogr": "Engineer in progress",
+  "footercopyr": "All rights reserved.",
+  "footerlocation": "Based in Ecuador",
+
+  "---HOME---": "",
+  "welcome": "Welcome to my Portfolio",
+  "welcome2": "Hello, I'm",
+  "subtitle": "Full Stack Junior Developer",
+  "mycv": "My Resume",
+
+  "---SKILL---": "",
+  "projectsProfessional": "Professional projects",
+  "projectsAcademic": "Academic experience",
+
+  "---ABOUT---": "",
+  "about.imageAlt": "Kevin's photo",
+  "aboutrole": "Full Stack Developer",
+  "aboutshort": "Developer passionate about transforming problems into solutions with code. Full-stack experience and production deployments.",
+  "about.stat1title": "Projects in production",
+  "about.stat1value": "1 (ISP)",
+  "about.stat2title": "Preferred stack",
+  "about.stat2value": "React • Node.js",
+  "about.philosophyTitle": "My philosophy",
+  "about.philosophy": "Programming is about solving problems with logic, writing clear code and continuously improving processes.",
+  "about.title": "My Professional History",
+  "about.leadin": "From desktop Java to web deployments in production — a path of learning and practice.",
+  "about.t1date": "University",
+  "about.t1title": "Start — Java / Eclipse",
+  "about.t1desc": "First semesters learning Java in Eclipse; programming foundations and OOP paradigms.",
+  "about.t2date": "Projects",
+  "about.t2title": "Desktop → C# / Visual Studio",
+  "about.t2desc": "Desktop application development, version control and best practices.",
+  "about.t3date": "Web",
+  "about.t3title": "Web — Angular, Node.js, React",
+  "about.t3desc": "I specialized in web development, APIs and server deployments.",
+  "about.t4date": "Production",
+  "about.t4title": "ISP System — Billing and Deploy",
+  "about.t4desc": "Participated in a management system for ISP: electronic billing, service mapping and production deployment.",
+  "about.diffTitle1": "Fast learning",
+  "about.diff1": "Self-taught: I research and master new libraries quickly.",
+  "about.diffTitle2": "Full-stack vision",
+  "about.diff2": "I understand from infrastructure to interface: networks, hardware and connected software.",
+  "about.longTitle": "Full version",
+  "about.collapse": "Close",
+  "about.expand": "Read more",
+  "about.long1": "I am a student/graduate of Information Technology Engineering specialized in software development. My journey started with Java and desktop development (Eclipse, NetBeans, Visual Studio/C#) and evolved towards web development (Angular, Node.js, React).",
+  "about.long2": "I am passionate about solving problems through programming: I design clear solutions, optimize processes and automate tasks that improve operations. I stand out for quickly learning new technologies, my attention to detail and combining software and network knowledge to deliver complete solutions.",
+  "about.long3": "Outside of work I consider myself a calm and collaborative person; I enjoy sharing with friends and continuing to train in programming through personal projects and tutorials.",
+
+  "education.title": "Education",
+  "education.lead": "My academic journey and continuous professional development.",
+  "education.university.dates": "Nov 2021 — May 2026 (est.)",
+  "education.university.degree": "Information Technology Engineering",
+  "education.university.description": "University education focused on software development, databases, networks, cybersecurity and IoT.",
+  "education.skills.software": "Software Development",
+  "education.skills.databases": "Databases",
+  "education.skills.networks": "Networks",
+  "education.progress.completed": "completed",
+  "education.highschool.dates": "2016 — 2021",
+  "education.highschool.degree": "Bachelor of Science",
+  "education.highschool.description": "Secondary education with specialization in science.",
+  "education.progress.finished": "Completed",
+
+  "experience": {
+    "title": "Work Experience",
+    "lead": "Professional background in real projects, support and deployments.",
+    "viewMore": "View more",
+    "viewLess": "View less",
+    "viewMoreExperiences": "View more experiences",
+    "demo": "Demo",
+    "viewDemo": "View demo",
+    "close": "Close",
+    "etyrse": {
+      "role": "Full Stack Developer",
+      "location": "Machala, Ecuador",
+      "period": "May 2024 — Aug 2024",
+      "short": "Comprehensive system for ISPs: electronic billing, customer mapping and admin panel.",
+      "bullets": [
+        "Integration with SRI for invoices.",
+        "Interactive mapping with Leaflet.",
+        "Microservices architecture with Docker."
+      ],
+      "allBullets": [
+        "Integration with SRI.",
+        "Employee registration with Cloudinary.",
+        "Leaflet for geolocation.",
+        "Dockerized microservices + API Gateway.",
+        "JWT authentication, optimized PostgreSQL.",
+        "Deployments: Vercel, Railway, Supabase, cPanel."
+      ]
+    },
+    "gadm": {
+      "company": "GAD Machala",
+      "role": "Intern — Networks & Support",
+      "location": "Machala, Ecuador",
+      "period": "Apr 2024 — Jun 2024",
+      "short": "Equipment maintenance and network infrastructure deployment in municipal offices.",
+      "bullets": [
+        "Network infrastructure for biometrics.",
+        "Maintenance and optimization of equipment.",
+        "Credentials and serials documentation."
+      ],
+      "allBullets": [
+        "Installation of biometric network systems.",
+        "Technical support and incident resolution.",
+        "Detailed inventory and documentation."
+      ]
+    },
+    "mae1": {
+      "company": "Regional Directorate 7 Loja of the Ministry of Environment, Water and Ecological Transition",
+      "role": "Intern — IT",
+      "location": "Machala, Ecuador",
+      "period": "Oct 2024 — Jan 2025",
+      "short": "Network infrastructure and web app development for network mapping with MikroTik.",
+      "bullets": [
+        "Rack switch + UTP CAT6 cabling.",
+        "Web app for network mapping.",
+        "Visualization of nodes and statuses."
+      ],
+      "allBullets": [
+        "Installation of switch and UTP CAT6 cabling.",
+        "Web application with MikroTik.",
+        "Improved IT management."
+      ]
+    },
+    "mae2": {
+      "company": "Regional Directorate 7 Loja of the Ministry of Environment, Water and Ecological Transition",
+      "role": "Intern — IT",
+      "location": "Machala, Ecuador",
+      "period": "Apr 2025 — Jul 2025",
+      "short": "Windows installation and configuration with Active Directory and security deployments.",
+      "bullets": [
+        "Windows 10/11 installation.",
+        "Integration with Active Directory and VAMT.",
+        "WSUS implementation."
+      ],
+      "allBullets": [
+        "Configuration of +15 devices.",
+        "License activation with VAMT.",
+        "WSUS for security.",
+        "Digital signature.",
+        "Windows vs Linux comparison."
+      ]
+    }
+  }
+}

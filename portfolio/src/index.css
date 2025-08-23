@@ -1,0 +1,27 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+@theme {
+  --color-bg: #0c0f0a; /* Fondo general oscuro con tinte verde */
+  --color-surface: #1a1f1b; /* Bloques/cards */
+  --color-primary: #ffffff; /* Texto principal blanco */
+  --color-secondary: #cbd5e1; /* Texto secundario gris claro */
+  --color-accent: #22c55e; /* Verde vibrante (acento) */
+  --color-muted: #334155; /* Gris azulado apagado */
+  --color-bg2: #0c0f0a; /* Fondo alternativo oscuro */
+  --color-bgsecondary: #F2F2F2;
+}
+html{
+  scroll-behavior: smooth;
+}
+/* Dark mode refinado */
+.dark {
+  --color-bg: #0a0a0a;
+  --color-surface: #111827;
+  --color-primary: #f9fafb;
+  --color-secondary: #9ca3af;
+  --color-accent: #3ea764; /* Verde más claro para contraste */
+  --color-muted: #6b7280;
+}
+
+@import "swiper/css";
+@import "swiper/css/navigation"; /* Fuerza a Swiper a no recortar */

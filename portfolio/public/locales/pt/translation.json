@@ -1,0 +1,159 @@
+{
+  "---HEADER---": "",
+  "home": "Início",
+  "about": "Sobre",
+  "certif": "Certificações",
+  "skls": "Habilidades",
+  "proy": "Projetos",
+  "experiences": "Experiência",
+  "contact": "Contato",
+  "education": "Educação",
+
+  "---FOOTER---": "",
+  "footerdesc": "Apaixonado por criar projetos e dar vida a ideias com código",
+  "footerwork": "Disponível para trabalhar",
+  "footerprogr": "Engenheiro em progresso",
+  "footercopyr": "Todos os direitos reservados.",
+  "footerlocation": "Localizado no Equador",
+
+  "---HOME---": "",
+  "welcome": "Bem-vindo ao meu Portfólio",
+  "welcome2": "Olá, sou",
+  "subtitle": "Desenvolvedor Full Stack Júnior",
+  "mycv": "Meu Currículo",
+
+  "---SKILL---": "",
+  "projectsProfessional": "Projetos profissionais",
+  "projectsAcademic": "Experiência acadêmica",
+
+  "---ABOUT---": "",
+  "about.imageAlt": "Foto do Kevin",
+  "aboutrole": "Desenvolvedor Full Stack",
+  "aboutshort": "Desenvolvedor apaixonado por transformar problemas em soluções com código. Experiência full-stack e implantações em produção.",
+  "about.stat1title": "Projetos em produção",
+  "about.stat1value": "1 (ISP)",
+  "about.stat2title": "Stack preferido",
+  "about.stat2value": "React • Node.js",
+  "about.philosophyTitle": "Minha filosofia",
+  "about.philosophy": "Programar é resolver problemas com lógica, escrever código claro e melhorar processos continuamente.",
+  "about.title": "Minha História Profissional",
+  "about.leadin": "Desde Java desktop até implantações web em produção — um caminho de aprendizado e prática.",
+  "about.t1date": "Universidade",
+  "about.t1title": "Início — Java / Eclipse",
+  "about.t1desc": "Primeiros semestres aprendendo Java no Eclipse; fundamentos de programação e paradigmas OOP.",
+  "about.t2date": "Projetos",
+  "about.t2title": "Desktop → C# / Visual Studio",
+  "about.t2desc": "Desenvolvimento de aplicações desktop, controle de versão e boas práticas.",
+  "about.t3date": "Web",
+  "about.t3title": "Web — Angular, Node.js, React",
+  "about.t3desc": "Especializei-me em desenvolvimento web, APIs e implantações em servidor.",
+  "about.t4date": "Produção",
+  "about.t4title": "Sistema ISP — Faturamento e Deploy",
+  "about.t4desc": "Participei de um sistema de gestão para ISP: faturamento eletrônico, mapeamento de serviços e implantação em produção.",
+  "about.diffTitle1": "Aprendizado rápido",
+  "about.diff1": "Autodidata: pesquiso e domino novas bibliotecas rapidamente.",
+  "about.diffTitle2": "Visão full-stack",
+  "about.diff2": "Compreendo desde a infraestrutura até a interface: redes, hardware e software conectados.",
+  "about.longTitle": "Versão completa",
+  "about.collapse": "Fechar",
+  "about.expand": "Ler mais",
+  "about.long1": "Sou estudante/formado em Engenharia de Tecnologias da Informação especializado em desenvolvimento de software. Minha trajetória começou com Java e desenvolvimento desktop (Eclipse, NetBeans, Visual Studio/C#) e evoluiu para o desenvolvimento web (Angular, Node.js, React).",
+  "about.long2": "Sou apaixonado por resolver problemas através da programação: projeto soluções claras, otimizo processos e automatizo tarefas que melhoram a operação. Destaco-me por aprender rapidamente novas tecnologias, pela minha atenção aos detalhes e por combinar conhecimentos de software e redes para entregar soluções completas.",
+  "about.long3": "Fora do trabalho me considero uma pessoa tranquila e colaborativa; gosto de compartilhar com amigos e continuar me formando em programação através de projetos pessoais e tutoriais.",
+  "education.title": "Educação",
+  "education.lead": "Minha trajetória acadêmica e desenvolvimento profissional contínuo.",
+  "education.university.dates": "Nov 2021 — Mai 2026 (est.)",
+  "education.university.degree": "Engenharia em Tecnologias da Informação",
+  "education.university.description": "Formação universitária orientada ao desenvolvimento de software, bancos de dados, redes, segurança cibernética e IoT.",
+  "education.skills.software": "Desenvolvimento de Software",
+  "education.skills.databases": "Bancos de Dados",
+  "education.skills.networks": "Redes",
+  "education.progress.completed": "concluído",
+  "education.highschool.dates": "2016 — 2021",
+  "education.highschool.degree": "Bacharelado em Ciências",
+  "education.highschool.description": "Formação secundária com especialização em ciências.",
+  "education.progress.finished": "Concluído",
+
+  "experience": {
+    "title": "Work Experience",
+    "lead": "Professional background in real projects, support and deployments.",
+    "viewMore": "View more",
+    "viewLess": "View less",
+    "viewMoreExperiences": "View more experiences",
+    "demo": "Demo",
+    "viewDemo": "View demo",
+    "close": "Close",
+    "etyrse": {
+      "role": "Full Stack Developer",
+      "location": "Machala, Ecuador",
+      "period": "May 2024 — Aug 2024",
+      "short": "Comprehensive system for ISPs: electronic billing, customer mapping and admin panel.",
+      "bullets": [
+        "Integration with SRI for invoices.",
+        "Interactive mapping with Leaflet.",
+        "Microservices architecture with Docker."
+      ],
+      "allBullets": [
+        "Integration with SRI.",
+        "Employee registration with Cloudinary.",
+        "Leaflet for geolocation.",
+        "Dockerized microservices + API Gateway.",
+        "JWT authentication, optimized PostgreSQL.",
+        "Deployments: Vercel, Railway, Supabase, cPanel."
+      ]
+    },
+    "gadm": {
+      "company": "GAD Machala",
+      "role": "Intern — Networks & Support",
+      "location": "Machala, Ecuador",
+      "period": "Apr 2024 — Jun 2024",
+      "short": "Equipment maintenance and network infrastructure deployment in municipal offices.",
+      "bullets": [
+        "Network infrastructure for biometrics.",
+        "Maintenance and optimization of equipment.",
+        "Credentials and serials documentation."
+      ],
+      "allBullets": [
+        "Installation of biometric network systems.",
+        "Technical support and incident resolution.",
+        "Detailed inventory and documentation."
+      ]
+    },
+    "mae1": {
+      "company": "Regional Directorate 7 Loja of the Ministry of Environment, Water and Ecological Transition",
+      "role": "Intern — IT",
+      "location": "Machala, Ecuador",
+      "period": "Oct 2024 — Jan 2025",
+      "short": "Network infrastructure and web app development for network mapping with MikroTik.",
+      "bullets": [
+        "Rack switch + UTP CAT6 cabling.",
+        "Web app for network mapping.",
+        "Visualization of nodes and statuses."
+      ],
+      "allBullets": [
+        "Installation of switch and UTP CAT6 cabling.",
+        "Web application with MikroTik.",
+        "Improved IT management."
+      ]
+    },
+    "mae2": {
+      "company": "Regional Directorate 7 Loja of the Ministry of Environment, Water and Ecological Transition",
+      "role": "Intern — IT",
+      "location": "Machala, Ecuador",
+      "period": "Apr 2025 — Jul 2025",
+      "short": "Windows installation and configuration with Active Directory and security deployments.",
+      "bullets": [
+        "Windows 10/11 installation.",
+        "Integration with Active Directory and VAMT.",
+        "WSUS implementation."
+      ],
+      "allBullets": [
+        "Configuration of +15 devices.",
+        "License activation with VAMT.",
+        "WSUS for security.",
+        "Digital signature.",
+        "Windows vs Linux comparison."
+      ]
+    }
+  }
+}
