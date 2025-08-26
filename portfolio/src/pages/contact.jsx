@@ -21,8 +21,8 @@ export default function ContactSection() {
     {
       id: "github",
       name: "GitHub",
-      href: "https://github.com/your-username",
-      copyText: "https://github.com/your-username",
+      href: "https://github.com/Dantell12",
+      copyText: "https://github.com/Dantell12",
       description: "Proyectos Open Source.",
       Icon: FaGithub,
       // color para el icono (no background)
@@ -31,8 +31,8 @@ export default function ContactSection() {
     {
       id: "email",
       name: "Email",
-      href: "mailto:you@example.com",
-      copyText: "you@example.com",
+      href: "mailto:joelkevin387@gmail.com",
+      copyText: "joelkevin387@gmail",
       description: "Comunicación Directa.",
       Icon: HiOutlineMail,
       bgClass: "bg-[#D62331]",
@@ -40,8 +40,8 @@ export default function ContactSection() {
     {
       id: "website",
       name: "Website",
-      href: "https://your-website.com",
-      copyText: "https://your-website.com",
+      href: "https://portfolio-kevin-zuniga.vercel.app",
+      copyText: "https://portfolio-kevin-zuniga.vercel.app",
       description: "Portafolio y Blog.",
       Icon: FaGlobe,
       bgClass: "bg-[#069269]",
@@ -49,8 +49,9 @@ export default function ContactSection() {
     {
       id: "whatsapp",
       name: "WhatsApp",
-      href: "https://wa.me/1234567890",
-      copyText: "https://wa.me/1234567890",
+      href: "https://wa.me/+593979674382?text=Hola%20Kevin%20!%20Quisiera%20contactarte",
+      copyText:
+        "https://wa.me/+593979674382?text=Hola%20Kevin%20!%20Quisiera%20contactarte",
       description: "Chatea conmigo",
       Icon: FaWhatsapp,
       bgClass: "bg-[#21BE5B]",
@@ -58,8 +59,8 @@ export default function ContactSection() {
     {
       id: "linkedin",
       name: "LinkedIn",
-      href: "https://www.linkedin.com/in/your-profile",
-      copyText: "https://www.linkedin.com/in/your-profile",
+      href: "https://www.linkedin.com/in/joel-zuniga-223b44325/",
+      copyText: "https://www.linkedin.com/in/joel-zuniga-223b44325/",
       description: "Red Profesional",
       Icon: FaLinkedin,
       bgClass: "bg-[#245CDF]",
@@ -67,8 +68,8 @@ export default function ContactSection() {
     {
       id: "instagram",
       name: "Instagram",
-      href: "https://instagram.com/your-handle",
-      copyText: "https://instagram.com/your-handle",
+      href: "https://instagram.com/joel_gsx",
+      copyText: "https://instagram.com/joel_gsx",
       description: "Conóceme",
       Icon: FaInstagram,
       bgClass:
