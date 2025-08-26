@@ -210,6 +210,8 @@ export default function Projects() {
         "/projects/email1.png",
         "/projects/email2.png",
         "/projects/email3.png",
+        "/projects/email4.png",
+        "/projects/email5.png",
       ],
       technologies: [
         "Python",

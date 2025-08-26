@@ -92,7 +92,7 @@ export default function About() {
             <div className="bg-surface backdrop-blur-3xl rounded-2xl p-6 shadow-lg">
               <div className="flex items-center gap-4">
                 <img
-                  src="src/assets/me.png"
+                  src="../../public/me.png"
                   alt={t("about.imageAlt", { defaultValue: "Foto de Kevin" })}
                   className="w-20 h-20 rounded-xl object-cover shadow-sm"
                 />
