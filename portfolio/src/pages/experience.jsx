@@ -6,8 +6,12 @@ import {
   FaServer,
   FaLaptopCode,
   FaExternalLinkAlt,
+  FaDoorClosed,
+  FaClosedCaptioning,
+  FaWindowClose,
 } from "react-icons/fa";
 import { useTranslation } from "react-i18next";
+import { FiLogOut } from "react-icons/fi";
 
 export default function Experience() {
   const { t } = useTranslation();
@@ -262,7 +266,7 @@ export default function Experience() {
 
                   {/* Card */}
                   <div className="flex-1 bg-gray-200/80 dark:bg-gray-950/20 p-6 rounded-2xl shadow-lg backdrop-blur">
-                    <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-2">
+                    <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-3">
                       <h3 className="text-lg font-semibold text-accent dark:text-accent">
                         {exp.role}
                       </h3>
@@ -350,13 +354,13 @@ export default function Experience() {
                 aria-modal="true"
               >
                 <div className="flex-1">
-                  <h3 className="text-xl font-bold text-primary">
+                  <h3 className="text-xl font-bold text-accent dark:text-accent">
                     {open.company}
                   </h3>
-                  <div className="text-sm text-secondary mt-1">
+                  <div className="text-sm font-semibold text-surface dark:text-primary mt-1">
                     {open.role} — {open.period}
                   </div>
-                  <ul className="mt-4 list-disc list-inside text-sm text-muted space-y-2">
+                  <ul className="mt-4 list-disc list-inside text-sm text-muted dark:text-muted space-y-2">
                     {open.allBullets.map((b, i) => (
                       <li key={i}>{b}</li>
                     ))}
@@ -375,9 +379,10 @@ export default function Experience() {
                     )}
                     <button
                       onClick={() => setOpen(null)}
-                      className="ml-auto text-sm text-muted"
+                      className="ml-auto gap-2 px-3 py-2 rounded-lg  font-medium shadow bg-gray-500 dark:bg-muted text-primary hover:bg-muted/50 inline-flex items-center"
                     >
-                      {t("experience.close", { defaultValue: "Cerrar" })}
+                     
+                       <FiLogOut  className="ml-1" />
                     </button>
                   </div>
                 </div>

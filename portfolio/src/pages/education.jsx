@@ -63,9 +63,9 @@ export default function Education() {
           <div className="space-y-12">
             {/* Universidad */}
             <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.45 }}
               viewport={{ once: true }}
               className="relative flex items-start"
             >
@@ -155,9 +155,9 @@ export default function Education() {
 
             {/* Escuela */}
             <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.45 }}
               viewport={{ once: true }}
               className="relative flex items-start"
             >
@@ -169,7 +169,7 @@ export default function Education() {
               </div>
 
               {/* Card */}
-              <div className="bg-gray-200/80 dark:bg-gray-950/20 p-6 rounded-2xl shadow-lg flex-1">
+              <div className="flex-1 bg-gray-200/80 dark:bg-gray-950/20 p-6 rounded-2xl shadow-lg backdrop-blur">
                 <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-3">
                   <h4 className="text-lg font-semibold text-accent dark:text-accent">
                     Colegio de Bachillerato "Juan Montalvo"
@@ -181,7 +181,7 @@ export default function Education() {
                   </span>
                 </div>
 
-                <p className="text-secondary text-sm md:text-base mb-2">
+                <p className="text-secondary text-sm md:text-base mt-3">
                   <span className="font-medium text-muted dark:text-primary">
                     {t("education.highschool.degree", {
                       defaultValue: "Bachillerato en Ciencias",
@@ -189,7 +189,7 @@ export default function Education() {
                   </span>
                 </p>
 
-                <p className="text-muted text-sm mb-4">
+                <p className="text-muted text-sm mt-3">
                   {t("education.highschool.description", {
                     defaultValue:
                       "Formación secundaria con especialización en informática y programación básica.",

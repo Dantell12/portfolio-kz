@@ -49,16 +49,20 @@ export default function Skills() {
   return (
     <section
       aria-labelledby="skills-title"
-      className="bg-gray-50 dark:bg-gray-900 pt-40 pb-30 px-4 sm:px-6 lg:px-8 "
+      className="bg-gray-50 dark:bg-gray-900  min-h-[60vh] pt-15 sm:pt-20 lg:pt-25 py-12 px-4 sm:px-6 lg:px-8"
       id="skills"
     >
       <div className="max-w-6xl mx-auto text-center bg-gray-200/80 dark:bg-gray-950/20 rounded-2xl shadow-lg p-6 backdrop-blur-sm">
-        <h2
+        <motion.h2
+          initial={{ opacity: 0, y: -10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
+          className="text-3xl lg:text-4xl inline-flex mb-4 items-center font-bold text-accent dark:text-accent"
           id="skills-title"
-          className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 dark:text-gray-100 mb-8"
         >
           <span className="text-accent">Skills</span>
-        </h2>
+        </motion.h2>
 
         {/* IMPORTANT: slidesPerView default is 1 — breakpoints control the rest */}
         <Swiper
@@ -87,8 +91,20 @@ export default function Skills() {
             return (
               <SwiperSlide key={i} className="py-4 px-2">
                 <motion.div
-                  whileHover={{ scale: 1.06, rotate: 1 }}
-                  whileTap={{ scale: 0.98 }}
+                  initial={{ opacity: 0 }}
+                  whileInView={{
+                    opacity: 1,
+                    transition: { duration: 0.5, delay: 0.2 },
+                  }}
+                  viewport={{ once: true }}
+                  animate={{ whileInView: { opacity: 1, y: 0 } }}
+                  whileHover={{
+                    scale: 1.06,
+                    rotate: 1,
+                  }}
+                  whileTap={{
+                    scale: 0.98,
+                  }}
                   className="w-full mx-auto flex flex-col items-center gap-4 p-5 rounded-2xl bg-white/80 dark:bg-white/5 shadow-md transition-shadow hover:shadow-xl cursor-pointer"
                   role="button"
                   tabIndex={0}

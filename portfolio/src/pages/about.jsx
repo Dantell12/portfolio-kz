@@ -83,9 +83,10 @@ export default function About() {
         <div className="max-w-6xl mx-auto grid gap-10 lg:grid-cols-3">
           {/* LEFT: HERO CARD */}
           <motion.aside
-            initial={{ opacity: 0, y: 12 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            viewport={{ once: true }}
             className="lg:col-span-1 flex flex-col gap-6"
           >
             <div className="bg-surface backdrop-blur-3xl rounded-2xl p-6 shadow-lg">
@@ -136,8 +137,12 @@ export default function About() {
 
             {/* small callout */}
             <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
               whileHover={{ scale: 1.02 }}
-              className="rounded-2xl p-4 bg-surface dark:bg-white/5 shadow-sm border border-muted"
+              className="bg-surface backdrop-blur-3xl rounded-2xl p-6 shadow-lg"
             >
               <div className="flex items-start gap-3">
                 <div className="text-2xl text-accent">
@@ -162,9 +167,10 @@ export default function About() {
 
           {/* RIGHT: Timeline + Details */}
           <motion.section
-            initial={{ opacity: 0, y: 12 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.05 }}
+             initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
             className="lg:col-span-2 bg-surface backdrop-blur-3xl rounded-2xl p-6 shadow-lg"
           >
             <h2 className="text-2xl font-bold text-primary mb-2">
