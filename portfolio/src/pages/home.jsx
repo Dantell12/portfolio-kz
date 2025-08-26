@@ -121,7 +121,7 @@ export default function Home() {
           {/* Imagen a la derecha */}
           <div className="bg-surface hidden md:flex items-center rounded-2xl shadow-lg justify-center">
             <img
-              src="../../public/me.png"
+              src="/me.png"
               alt="Kevin Zuñiga"
               className="w-full max-w-2xl rounded-2xl  object-cover"
             />
