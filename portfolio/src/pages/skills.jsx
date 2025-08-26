@@ -6,7 +6,6 @@ import {
   FaJs,
   FaGitAlt,
   FaAngular,
-  FaVuejs,
 } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -21,7 +20,7 @@ import {
   MongoDBIcon,
   NetCoreIcon,
   TypeScriptIcon,
-} from "../assets/icons";
+} from "/icons";
 import { useTranslation } from "react-i18next";
 const skills = [
   { name: "React", icon: FaReact },
