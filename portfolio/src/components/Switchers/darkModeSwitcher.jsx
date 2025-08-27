@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { HiMoon, HiSun } from "react-icons/hi2";
 import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
-import useColorMode from "../hooks/useColorMode";
+import useColorMode from "../../hooks/useColorMode";
 export default function DarkModeSwitcherIcon() {
   const [mode, setMode] = useColorMode();
   const [prefersDark, setPrefersDark] = useState(false);

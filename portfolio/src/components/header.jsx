@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
-import DarkModeSwitcherIcon from "./darkModeSwitcher";
+import DarkModeSwitcherIcon from "./Switchers/darkModeSwitcher";
 
 import { Trans, useTranslation } from "react-i18next";
-import LanguageSwitcher from "./languageSwitcher";
-import NavDropdown from "./navDropdown";
+import LanguageSwitcher from "./Switchers/languageSwitcher";
+import NavDropdown from "./Dropdowns/navDropdown";
 
 export default function Header() {
   const { t } = useTranslation();
@@ -47,10 +47,10 @@ export default function Header() {
       >
         <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
           {/* Logo / Nombre */}
-          <a href="#inicio" className="flex items-center gap-2">
+          <a href="#home" className="flex items-center gap-2">
             <img
-              src="https://flowbite.com/docs/images/logo.svg"
-              className="h-7"
+              src="/logo1.png"
+              className="h-10 w-10 border-2 rounded-full border-surface bg-surface hover:bg-surface/60 hover:border-accent/60"
               alt="Logo"
             />
           </a>

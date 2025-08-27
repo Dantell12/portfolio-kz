@@ -20,7 +20,7 @@ import {
   MongoDBIcon,
   NetCoreIcon,
   TypeScriptIcon,
-} from "../../public/icons";
+} from "../assets/icons.tsx";
 import { useTranslation } from "react-i18next";
 const skills = [
   { name: "React", icon: FaReact },

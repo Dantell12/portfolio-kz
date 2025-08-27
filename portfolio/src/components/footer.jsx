@@ -1,4 +1,6 @@
 import { useTranslation } from "react-i18next";
+import { motion } from "framer-motion";
+
 import {
   FaGithub,
   FaLinkedin,
@@ -17,14 +19,21 @@ export default function Footer() {
   return (
     <footer className="relative bg-surface/10 dark:bg-blue-950 border-t border-gray-200 dark:border-blue-900">
       {/* Botón flotante derecho */}
-      <button
-        onClick={scrollTop}
-        aria-label={t("backToTop", { defaultValue: "Volver arriba" })}
-        title={t("backToTop", { defaultValue: "Volver arriba" })}
-        className="absolute right-6 top-1/2 transform -translate-y-1/2 z-50 inline-flex items-center justify-center w-12 h-12 rounded-full bg-accent text-white shadow-lg hover:scale-105 transition-transform ring-1 ring-accent/30"
+      <motion.div
+        initial={{ opacity: 0, }}
+        whileInView={{ opacity: 1, }}
+        transition={{ duration: 1 }}
+        viewport={{ once: true }}
       >
-        <FaChevronUp className="w-4 h-4" />
-      </button>
+        <button
+          onClick={scrollTop}
+          aria-label={t("backToTop", { defaultValue: "Volver arriba" })}
+          title={t("backToTop", { defaultValue: "Volver arriba" })}
+          className="absolute right-6 top-1/2 transform -translate-y-1/2 z-50 inline-flex items-center justify-center w-12 h-12 rounded-full bg-accent text-white shadow-lg hover:scale-105 transition-transform ring-1 ring-accent/30"
+        >
+          <FaChevronUp className="w-4 h-4" />
+        </button>
+      </motion.div>
 
       <div className="max-w-screen-xl mx-auto px-6 py-10 flex flex-col md:flex-row items-center justify-between gap-6">
         {/* Nombre + frase (con iconos sociales debajo) */}

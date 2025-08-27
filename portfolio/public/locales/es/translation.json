@@ -7,7 +7,7 @@
   "proy": "Proyectos",
   "experiences": "Experiencia",
   "contact": "Contacto",
-    "education": "Educación",
+  "education": "Educación",
 
   "---FOOTER---": "",
   "footerdesc": "Apasionado por crear proyectos y dar vida a ideas con código",
@@ -59,6 +59,7 @@
   "about.long1": "Soy estudiante/egresado de Ingeniería en Tecnologías de la Información especializado en desarrollo de software. Mi trayectoria comenzó con Java y desarrollo de escritorio (Eclipse, NetBeans, Visual Studio/C#) y evolucionó hacia el desarrollo web (Angular, Node.js, React).",
   "about.long2": "Me apasiona resolver problemas mediante programación: diseño soluciones claras, optimizo procesos y automatizo tareas que mejoran la operativa. Me destaco por aprender rápidamente tecnologías nuevas, por mi atención al detalle y por combinar conocimientos de software y redes para entregar soluciones completas.",
   "about.long3": "Fuera del trabajo me considero una persona tranquila y colaborativa; disfruto compartir con amigos y seguir formándome en programación mediante proyectos personales y tutoriales.",
+
   "education.title": "Educación",
   "education.lead": "Mi trayectoria académica y desarrollo profesional continuo.",
   "education.university.dates": "Nov 2021 — May 2026 (est.)",
@@ -153,6 +154,201 @@
         "Firma electrónica.",
         "Comparativo Windows vs Linux."
       ]
+    }
+  },
+  "projects.icontrol.title": "iControl System",
+  "projects.icontrol.shortDescription": "Sistema integral de gestión para ISP con mapeo de servicios, facturación electrónica y administración de empleados.",
+  "projects.icontrol.fullDescription": "Sistema completo para proveedores de internet que incluye mapeo de servicios, gestión de clientes, facturación electrónica compatible con el SRI de Ecuador y administración de empleados con control de roles. Desarrollado con arquitectura de microservicios y desplegado en producción.",
+  "projects.icontrol.problem": "Los ISP necesitaban una solución integral para mapear servicios de clientes, gestionar cajas de fibra óptica, administrar empleados con diferentes roles y realizar facturación electrónica compatible con el SRI de Ecuador.",
+  "projects.icontrol.solution": "Desarrollo de un sistema modular con arquitectura de microservicios que permite la gestión completa de todos los aspectos operativos de un ISP, desde el mapeo geográfico hasta la emisión de comprobantes electrónicos.",
+  "projects.icontrol.features.1": "Mapa interactivo con Leaflet para visualización de servicios",
+  "projects.icontrol.features.2": "Módulo de empleados con roles y permisos",
+  "projects.icontrol.features.3": "Gestión de clientes y servicios múltiples",
+  "projects.icontrol.features.4": "Facturación electrónica compatible con SRI",
+  "projects.icontrol.features.5": "Generación automática de deudas con BullMQ",
+  "projects.icontrol.features.6": "Envío de comprobantes por correo con Nodemailer",
+  "projects.icontrol.features.7": "API Gateway para unificar microservicios",
+  "projects.icontrol.features.8": "Autenticación JWT con control de acceso",
+  "projects.icontrol.challenges.1": "Integración compleja con API del SRI para comprobantes electrónicos",
+  "projects.icontrol.challenges.2": "Manejo de grandes volúmenes de datos geográficos",
+  "projects.icontrol.challenges.3": "Implementación de sistema de colas para procesos asíncronos",
+  "projects.icontrol.challenges.4": "Diseño de base de datos con 28 tablas optimizadas",
+  "projects.icontrol.challenges.5": "Coordinación de múltiples microservicios dockerizados",
+  "projects.icontrol.achievements.1": "Sistema en producción con más de 100 usuarios activos",
+  "projects.icontrol.achievements.2": "Reducción del 60% en tiempo de procesos manuales",
+  "projects.icontrol.achievements.3": "Implementación exitosa de facturación electrónica",
+  "projects.icontrol.achievements.4": "Arquitectura escalable con microservicios",
+  "projects.icontrol.achievements.5": "Interfaz responsive y intuitiva",
+  "projects.technologies.microservices": "Microservicios",
+  "projects.vetclinic.title": "Veterinary Clinic System",
+  "projects.vetclinic.shortDescription": "Aplicación de escritorio para gestión de clínicas veterinarias: pacientes, citas, inventario, tratamientos y facturación.",
+  "projects.vetclinic.fullDescription": "Sistema de escritorio desarrollado en Visual Studio 2022 (.NET Framework) como proyecto para la asignatura de Programación Avanzada. Arquitectura en 4 capas (Datos, Lógica, Entidades, Presentación) con base de datos en SQL Server y más de 70 procedimientos almacenados para CRUD y lógica de negocio.",
+  "projects.vetclinic.problem": "Las clínicas veterinarias necesitaban un sistema de escritorio para registrar clientes y mascotas, controlar citas, inventario de medicamentos, llevar historial clínico y generar facturas por servicios y tratamientos.",
+  "projects.vetclinic.solution": "Desarrollé una aplicación de escritorio en Visual Studio 2022 con una arquitectura en 4 capas que permite registrar clientes y mascotas, agendar citas, llevar historial clínico/bitácoras, controlar inventario de medicamentos y generar facturación automatizada.",
+  "projects.vetclinic.features.1": "Registro de pacientes y dueños con historial clínico",
+  "projects.vetclinic.features.2": "Agenda y control de citas (creación de bitácora tras la atención)",
+  "projects.vetclinic.features.3": "Gestión de inventario de medicamentos",
+  "projects.vetclinic.features.4": "Módulo de tratamientos/servicios por clínica",
+  "projects.vetclinic.features.5": "Facturación automática según servicios y medicación",
+  "projects.vetclinic.features.6": "Arquitectura en 4 capas (Datos, Lógica, Entidades, Presentación)",
+  "projects.vetclinic.features.7": "Más de 70 procedimientos almacenados para operaciones CRUD y cálculos",
+  "projects.vetclinic.challenges.1": "Diseño del diagrama ER y normalización para soportar historial clínico",
+  "projects.vetclinic.challenges.2": "Implementación de lógica de negocio distribuida en 4 capas",
+  "projects.vetclinic.challenges.3": "Gran cantidad de procedimientos almacenados y vistas personalizadas",
+  "projects.vetclinic.challenges.4": "Integración de facturación automática con precios de servicios y medicinas",
+  "projects.vetclinic.challenges.5": "Manejo de transacciones y consistencia en SQL Server",
+  "projects.vetclinic.achievements.1": "Solución completa entregada como proyecto de Programación Avanzada",
+  "projects.vetclinic.achievements.2": "Base de datos robusta con más de 70 SP, vistas y cálculos",
+  "projects.vetclinic.achievements.3": "Implementación de arquitectura en capas aplicando POO y LINQ",
+  "projects.vetclinic.achievements.4": "Interfaz de escritorio funcional y preparada para entornos productivos",
+  "projects.vetclinic.achievements.5": "Código publicado en GitHub como evidencia del projecto",
+  "projects.technologies.tsql": "T-SQL (Stored Procedures)",
+  "projects.technologies.adonet": "ADO.NET / dbmi",
+  "projects.technologies.oop": "POO",
+
+  "projects": {
+    "icontrol": {
+      "title": "iControl - Sistema de Gestión de Red ISP",
+      "shortDescription": "Aplicación full-stack para la administración de clientes, servicios y red en un ISP, con microservicios y mapas interactivos.",
+      "fullDescription": "iControl es un sistema desarrollado para proveedores de servicios de Internet (ISP) que permite la gestión completa de clientes, contratos, facturación, incidencias y monitoreo de infraestructura de red. Cuenta con un frontend en React + TypeScript y un backend basado en Node.js con arquitectura de microservicios, integrando PostgreSQL, Redis y BullMQ para la gestión de colas. Incluye mapas interactivos con Leaflet para ubicar clientes y nodos, almacenamiento de imágenes en Cloudinary y seguridad con JWT. Se implementó despliegue con Docker para garantizar escalabilidad y modularidad.",
+      "problem": "Los proveedores de Internet locales requieren un sistema centralizado que facilite la gestión de clientes, servicios y red, evitando procesos manuales y asegurando la trazabilidad de la información.",
+      "solution": "Se desarrolló una plataforma modular full-stack con microservicios, frontend interactivo y mapas dinámicos. El backend maneja facturación, contratos y monitoreo con persistencia en PostgreSQL y Redis. El frontend permite a los administradores visualizar clientes, servicios contratados y la topología de red en mapas, garantizando escalabilidad gracias al despliegue con Docker.",
+      "features": {
+        "1": "Gestión de clientes (registro, actualización, historial de contratos)",
+        "2": "Administración de servicios y planes de Internet",
+        "3": "Sistema de facturación con control de pagos",
+        "4": "Mapas interactivos para ubicar clientes, nodos y conexiones",
+        "5": "Gestión de incidencias y reportes de soporte",
+        "6": "Colas de tareas y notificaciones con BullMQ + Redis",
+        "7": "Autenticación segura con JWT y roles de usuario",
+        "8": "Integración con almacenamiento en la nube (Cloudinary)"
+      },
+      "challenges": {
+        "1": "Diseño de una arquitectura de microservicios escalable",
+        "2": "Integración de mapas interactivos con Leaflet y datos dinámicos",
+        "3": "Optimización del manejo de colas con Redis y BullMQ",
+        "4": "Garantizar consistencia de datos entre microservicios",
+        "5": "Implementación de seguridad con JWT y roles de acceso"
+      },
+      "achievements": {
+        "1": "Plataforma full-stack funcional desplegada en producción",
+        "2": "Sistema de clientes, facturación y red totalmente operativo",
+        "3": "Topología de red visualizada en mapas interactivos",
+        "4": "Arquitectura modular lista para escalar con Docker",
+        "5": "Código publicado en GitHub como evidencia del proyecto"
+      }
+    },
+    "vetclinic": {
+      "title": "VetClinic - Sistema de Gestión Veterinaria",
+      "shortDescription": "Aplicación de escritorio en C# (.NET + WinForms) para la gestión de clínicas veterinarias, con base de datos SQL Server.",
+      "fullDescription": "Un sistema de escritorio desarrollado en C# con .NET Framework y WinForms que permite gestionar una clínica veterinaria. Incluye módulos para el registro de clientes, mascotas, historial médico, citas, tratamientos y facturación. La base de datos está construida en SQL Server, utilizando consultas SQL, procedimientos almacenados, LINQ y ADO.NET, aplicando principios de programación orientada a objetos.",
+      "problem": "Las clínicas veterinarias pequeñas y medianas carecen de un sistema digital centralizado para gestionar pacientes, médicos y tratamientos, lo que genera procesos manuales poco eficientes.",
+      "solution": "Se implementó una aplicación de escritorio robusta que centraliza la gestión de clientes, mascotas y servicios. Incluye CRUD completo, historial médico y control de citas, además de reportes administrativos, asegurando la persistencia de datos en SQL Server.",
+      "features": {
+        "1": "CRUD de clientes y mascotas",
+        "2": "Gestión de historial médico y consultas",
+        "3": "Registro de citas y tratamientos",
+        "4": "Módulo de facturación y pagos",
+        "5": "Autenticación y gestión de usuarios",
+        "6": "Reportes y estadísticas de pacientes",
+        "7": "Interfaz amigable en WinForms con validaciones"
+      },
+      "challenges": {
+        "1": "Diseñar un esquema relacional eficiente en SQL Server",
+        "2": "Implementar procedimientos almacenados para operaciones CRUD",
+        "3": "Asegurar integridad de datos entre clientes, mascotas y tratamientos",
+        "4": "Optimizar consultas con LINQ y ADO.NET",
+        "5": "Aplicar principios de POO en la arquitectura del sistema"
+      },
+      "achievements": {
+        "1": "Sistema funcional entregado como proyecto universitario",
+        "2": "Gestión integral de clientes, mascotas y servicios implementada",
+        "3": "Uso efectivo de SQL Server con procedimientos y consultas",
+        "4": "Arquitectura modular y mantenible en C#",
+        "5": "Código publicado en GitHub como evidencia del proyecto"
+      }
+    },
+    "biblio": {
+      "title": "Bibliographic Management System - UTMACH",
+      "shortDescription": "Sistema para organizar y gestionar referencias académicas de investigadores en la Universidad Técnica de Machala.",
+      "fullDescription": "Un sistema de gestión bibliográfica que permite organizar, registrar y consultar publicaciones académicas. Facilita la administración de investigadores, artículos científicos y su vinculación con distintos tipos de publicaciones como revistas, informes técnicos o actas de congreso. Incluye CRUDs completos y uso de procedimientos almacenados en SQL Server.",
+      "problem": "La gestión manual de referencias académicas era ineficiente, dificultando la organización de investigadores y sus publicaciones en diferentes medios.",
+      "solution": "Se implementó un sistema de gestión bibliográfica que centraliza el manejo de investigadores, artículos científicos y publicaciones, con consultas optimizadas y procedimientos almacenados en SQL Server.",
+      "features": {
+        "1": "Gestión de investigadores y sus publicaciones",
+        "2": "CRUD completo de artículos científicos",
+        "3": "Soporte para revistas, informes técnicos y actas de congreso",
+        "4": "Modelo entidad-relación para la organización de datos"
+      },
+      "challenges": {
+        "1": "Diseño de un modelo ER escalable",
+        "2": "Optimización de procedimientos almacenados",
+        "3": "Garantizar consistencia en las relaciones entre investigadores y publicaciones"
+      },
+      "achievements": {
+        "1": "Estandarización del registro de publicaciones académicas",
+        "2": "Acceso más ágil a las referencias",
+        "3": "Base sólida para proyectos de investigación futuros en la universidad"
+      },
+      "technologies": {
+        "storedProcedures": "Stored Procedures",
+        "erModeling": "ER Modeling"
+      }
+    },
+
+    "email": {
+      "title": "Email Classifier - Spam & Phishing Detection",
+      "shortDescription": "Modelo predictivo basado en Machine Learning para identificar automáticamente correos electrónicos maliciosos (spam y phishing).",
+      "fullDescription": "Proyecto desarrollado en la materia de Inteligencia de Negocios con el objetivo de aplicar técnicas de Machine Learning para la detección de correos maliciosos. Se trabajó con un dataset de más de 16,000 correos electrónicos, aplicando preprocesamiento de texto (CountVectorizer con Bag of Words) y entrenando múltiples clasificadores: Multinomial y Bernoulli Naive Bayes, SVC, Random Forest, MLP Classifier, Logistic Regression, XGBoost y K-Nearest Neighbors. Los modelos fueron evaluados con métricas clave como Accuracy, Precision, Recall, F1-score, ROC-AUC y curvas Precision-Recall. Los mejores resultados se obtuvieron con XGBoost y Random Forest, destacando la efectividad de los métodos de ensamble. El proyecto demostró la aplicabilidad de ML en la ciberseguridad para fortalecer la detección de spam y phishing.",
+      "problem": "El incremento de correos electrónicos fraudulentos como spam y phishing representa una amenaza significativa para usuarios y empresas, dificultando su detección manual.",
+      "solution": "Construcción de un sistema de clasificación automática utilizando múltiples modelos de Machine Learning, evaluados con métricas avanzadas para garantizar precisión en la detección de correos maliciosos.",
+      "features": {
+        "1": "Preprocesamiento de datos con CountVectorizer (Bag of Words)",
+        "2": "Entrenamiento con múltiples clasificadores (Naive Bayes, Random Forest, XGBoost, SVC, entre otros)",
+        "3": "Evaluación con métricas Accuracy, Precision, Recall, F1-score, ROC-AUC",
+        "4": "Visualización de resultados con heatmaps y curvas de rendimiento"
+      },
+      "challenges": {
+        "1": "Manejo del desbalance de clases en el dataset",
+        "2": "Optimización de hiperparámetros para múltiples modelos",
+        "3": "Comparación objetiva entre distintos clasificadores"
+      },
+      "achievements": {
+        "1": "Modelos XGBoost y Random Forest alcanzaron la mayor precisión",
+        "2": "Implementación de un pipeline completo de preprocesamiento y evaluación",
+        "3": "Demostración exitosa de la utilidad del ML en ciberseguridad"
+      }
+    },
+    "shoemarket": {
+      "title": "Shoe Market - Tienda Virtual de Calzado",
+      "shortDescription": "Tienda online de calzado con catálogo, carrito, gestión de inventario y reportes de ventas (frontend en Vite + backend en Node.js/TypeScript).",
+      "fullDescription": "Una simulación completa de una tienda virtual especializada en calzado. Permite registro y login de usuarios, CRUD de productos y clientes, carrito de compras con control de stock y descuentos por temporada, proceso de compra (simulado/integrable con pasarela), generación de facturas y reportes analíticos (ventas por temporada, clientes frecuentes, carritos abandonados). Frontend con Vite + React + TypeScript + Tailwind; backend con Node.js + TypeScript usando Sequelize y PostgreSQL.",
+      "problem": "Necesidad de una plataforma que permita simular todo el ciclo de venta de una tienda (gestión de clientes, control de inventario, carrito, facturación y análisis de ventas), asegurando la consistencia del stock y facilitando reportes comerciales.",
+      "solution": "Implementación de una aplicación full-stack: frontend interactivo con Vite/React para la experiencia de cliente y panel administrativo; backend REST con Node.js/TypeScript y Sequelize que gestiona transacciones, actualiza stock de forma atómica y expone endpoints para reporting. Se añadieron validaciones de negocio (no vender más de lo disponible, alertas de stock mínimo, descuentos por temporada) y generación de factura detallada tras la compra.",
+      "features": {
+        "1": "CRUD de productos (código, nombre, categoría, precio, stock, temporada, descuento automático por temporada)",
+        "2": "CRUD de clientes y gestión de usuarios (roles: admin / cliente)",
+        "3": "Página pública de catálogo con búsqueda y filtros; solo usuarios autenticados pueden agregar al carrito",
+        "4": "Carrito de compras: añadir, modificar cantidades, eliminar; bloqueo al superar stock disponible",
+        "5": "Cálculo de totales con impuestos y descuentos; confirmación de compra que descuenta stock y genera factura",
+        "6": "Alertas de stock bajo (rango configurable) y estado 'agotado' cuando el stock llega a 0",
+        "7": "Reportes y dashboard (ingresos por temporada, productos sin venta, clientes frecuentes, carritos abandonados) usando librería de gráficas",
+        "8": "Autenticación con JWT y rutas protegidas para panel administrativo"
+      },
+      "challenges": {
+        "1": "Mantener consistencia de stock en ventas concurrentes (transacciones y control en BD)",
+        "2": "Diseño de esquema relacional y procedimientos para reporting eficiente",
+        "3": "Cálculo correcto de descuentos por temporada y aplicación de impuestos",
+        "4": "Generación de facturas detalladas y trazabilidad de ventas",
+        "5": "Integración/simulación de pasarela de pagos y manejo de estados de pago"
+      },
+      "achievements": {
+        "1": "Aplicación funcional full-stack entregada como examen (frontend y backend completos)",
+        "2": "Sistema de inventario con control de stock y alertas implementado",
+        "3": "Reportes analíticos que permiten identificar ingresos por temporada y carritos abandonados",
+        "4": "Arquitectura preparada para escalar (Sequelize + PostgreSQL, endpoints REST bien definidos)",
+        "5": "Código publicado en GitHub como evidencia del proyecto"
+      }
     }
   }
 }

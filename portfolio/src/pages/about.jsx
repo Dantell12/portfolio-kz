@@ -2,7 +2,6 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   FaUserAlt,
-  FaDownload,
   FaLightbulb,
   FaCogs,
   FaStar,

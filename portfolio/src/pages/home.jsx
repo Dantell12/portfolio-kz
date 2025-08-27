@@ -12,16 +12,15 @@ import { useTranslation } from "react-i18next";
 import About from "./about";
 import { motion } from "framer-motion";
 import Education from "./education";
-import Projects from "./proyects";
 import Experience from "./experience";
 import ContactSection from "./contact";
+import Projects from "./projects/proyects";
 
 export default function Home() {
   const { t } = useTranslation();
   return (
     <>
       <Header />
-
       {/* Fondo general */}
       <section
         id="home"
