@@ -1,7 +1,7 @@
 // src/pages/Projects.jsx
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { FaCode } from "react-icons/fa";
+import { FaCode, FaCodeBranch, FaHammer } from "react-icons/fa";
 import { useTranslation } from "react-i18next";
 
 import TechnologyStack from "../../components/Dropdowns/techDropdown";
@@ -15,7 +15,7 @@ export default function Projects() {
   const [showDetailModal, setShowDetailModal] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState({});
 
-const projects = useProjectsDetail();
+  const projects = useProjectsDetail();
 
   // Inicializar el índice de imagen para cada proyecto (cuando projects cambie)
   useEffect(() => {
@@ -41,18 +41,19 @@ const projects = useProjectsDetail();
   return (
     <section
       id="projects"
-      className="bg-bgsecondary dark:bg-bg py-20 px-4 sm:px-6 lg:px-8"
+      className="bg-bgsecondary dark:bg-bg min-h-screen pt-25 py-12 px-4 sm:px-6 lg:px-8"
     >
       <div className="max-w-6xl mx-auto">
         {/* Encabezado */}
-        <div className="text-center mb-16">
+        <div className="text-start mb-12">
           <motion.h2
             initial={{ opacity: 0, y: -10 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
-            className="text-3xl md:text-4xl font-bold text-primary"
+            className="text-3xl lg:text-4xl inline-flex items-center font-bold text-accent dark:text-accent"
           >
+            <FaCodeBranch className="mr-1" />
             {t("projects.title", { defaultValue: "Proyectos Destacados" })}
           </motion.h2>
           <motion.p
@@ -60,7 +61,7 @@ const projects = useProjectsDetail();
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.2 }}
             viewport={{ once: true }}
-            className="mt-3 text-secondary max-w-2xl mx-auto text-sm md:text-base"
+            className="mt-3 text-lg sm:text-lg lg:text-xl font-semibold text-muted dark:text-primary/80 mx-auto mb-6"
           >
             {t("projects.subtitle", {
               defaultValue:

@@ -14,7 +14,7 @@ import { motion } from "framer-motion";
 import Education from "./education";
 import Experience from "./experience";
 import ContactSection from "./contact";
-import Projects from "./projects/proyects";
+import Projects from "./projects/projects";
 
 export default function Home() {
   const { t } = useTranslation();

@@ -8,12 +8,15 @@ export default function ModalImageCarousel({ project }) {
   const nextModalImage = () =>
     setCurrentModalIndex((i) => (i + 1) % project.images.length);
   const prevModalImage = () =>
-    setCurrentModalIndex((i) => (i - 1 + project.images.length) % project.images.length);
+    setCurrentModalIndex(
+      (i) => (i - 1 + project.images.length) % project.images.length
+    );
 
   return (
     <div className="mb-6 h-60 sm:h-96 relative">
       <img
         src={project.images[currentModalIndex]}
+        loading="lazy"
         alt={`${project.title} - Imagen ${currentModalIndex + 1}`}
         className="w-full h-full object-fill rounded-lg"
       />
@@ -24,7 +27,9 @@ export default function ModalImageCarousel({ project }) {
             {project.images.map((_, index) => (
               <button
                 key={index}
-                className={`w-3 h-3 rounded-full ${currentModalIndex === index ? "bg-accent" : "bg-white/50"}`}
+                className={`w-3 h-3 rounded-full ${
+                  currentModalIndex === index ? "bg-accent" : "bg-white/50"
+                }`}
                 onClick={() => setCurrentModalIndex(index)}
                 aria-label={`Ver imagen ${index + 1}`}
               />

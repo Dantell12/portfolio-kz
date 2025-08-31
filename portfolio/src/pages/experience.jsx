@@ -9,6 +9,7 @@ import {
   FaDoorClosed,
   FaClosedCaptioning,
   FaWindowClose,
+  FaHammer,
 } from "react-icons/fa";
 import { useTranslation } from "react-i18next";
 import { FiLogOut } from "react-icons/fi";
@@ -224,6 +225,7 @@ export default function Experience() {
             viewport={{ once: true }}
             className="text-3xl lg:text-4xl inline-flex items-center font-bold text-accent dark:text-accent"
           >
+            <FaHammer className="mr-1"/>
             {t("experience.title", { defaultValue: "Experiencia Laboral" })}
           </motion.h2>
           <motion.p

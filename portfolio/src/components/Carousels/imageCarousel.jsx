@@ -21,6 +21,7 @@ export default function ImageCarousel({ project }) {
     <div className="h-48 overflow-hidden relative">
       <img
         src={project.images[currentIndex]}
+        loading="lazy"
         alt={`${project.title} - Imagen ${currentIndex + 1}`}
         className="w-full h-full px-3 py-3 rounded-t-3xl object-cover transition-transform duration-500"
       />
