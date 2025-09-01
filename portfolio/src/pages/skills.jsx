@@ -185,16 +185,16 @@ export default function Skills() {
                         : s.name === "CSS"
                         ? "text-blue-500"
                         : s.name === "PostgreSQL"
-                        ? "text-blue-600/70"
+                        ? "text-[#31648C]"
                         : s.name === "Git"
                         ? "text-red-500"
                         : s.name === "Angular"
-                        ? "text-red-600/90"
+                        ? "text-[#D93240]"
                         : "text-gray-50 dark:text-gray-900")
                     }
                   />
                 </div>
-                <span className="text-sm font-medium">{s.name}</span>
+                <span className="text-sm sm:text-xl font-semibold text-muted dark:text-primary">{s.name}</span>
               </div>
             );
           })}

@@ -1,6 +1,7 @@
 // src/components/Carousels/imageCarousel.jsx
 import { useState } from "react";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
+import LazyImage from "../lazyImage";
 
 export default function ImageCarousel({ project }) {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -19,7 +20,7 @@ export default function ImageCarousel({ project }) {
 
   return (
     <div className="h-48 overflow-hidden relative">
-      <img
+      <LazyImage
         src={project.images[currentIndex]}
         loading="lazy"
         alt={`${project.title} - Imagen ${currentIndex + 1}`}

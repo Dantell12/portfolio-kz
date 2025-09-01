@@ -1,12 +1,14 @@
 // src/components/Carousels/modalImageCarousel.jsx
-import { useState } from "react";
+import { Suspense, useState } from "react";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
+import LazyImage from "../lazyImage";
 
 export default function ModalImageCarousel({
   project,
   heightClass = "h-56 sm:h-80 md:h-96 lg:h-[32rem]",
 }) {
   const [currentModalIndex, setCurrentModalIndex] = useState(0);
+  const [loaded, setLoaded] = useState(false);
 
   const nextModalImage = () =>
     setCurrentModalIndex((i) => (i + 1) % project.images.length);
@@ -21,14 +23,17 @@ export default function ModalImageCarousel({
       className={`mb-6 relative ${heightClass} w-full rounded-lg overflow-hidden bg-gray-800`}
     >
       {/* Imagen usando object-cover para mantener proporción sin "aplasta" */}
-      <img
+      {!loaded && (
+        <div className="absolute inset-0 bg-gray-700 animate-pulse rounded-lg" />
+      )}
+
+      <LazyImage
         src={project.images[currentModalIndex]}
         loading="lazy"
         alt={`${project.title} - Imagen ${currentModalIndex + 1}`}
         className="w-full h-full object-cover transition-transform duration-300"
         style={{ transformOrigin: "center" }}
       />
-
       {/* Indicadores */}
       {project.images.length > 1 && (
         <>
