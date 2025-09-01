@@ -2,7 +2,10 @@
 import { useState } from "react";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
-export default function ModalImageCarousel({ project }) {
+export default function ModalImageCarousel({
+  project,
+  heightClass = "h-56 sm:h-80 md:h-96 lg:h-[32rem]",
+}) {
   const [currentModalIndex, setCurrentModalIndex] = useState(0);
 
   const nextModalImage = () =>
@@ -13,17 +16,23 @@ export default function ModalImageCarousel({ project }) {
     );
 
   return (
-    <div className="mb-6 h-60 sm:h-96 relative">
+    // contenedor con altura responsiva; overflow-hidden evita que la imagen "salga"
+    <div
+      className={`mb-6 relative ${heightClass} w-full rounded-lg overflow-hidden bg-gray-800`}
+    >
+      {/* Imagen usando object-cover para mantener proporción sin "aplasta" */}
       <img
         src={project.images[currentModalIndex]}
         loading="lazy"
         alt={`${project.title} - Imagen ${currentModalIndex + 1}`}
-        className="w-full h-full object-fill rounded-lg"
+        className="w-full h-full object-cover transition-transform duration-300"
+        style={{ transformOrigin: "center" }}
       />
 
+      {/* Indicadores */}
       {project.images.length > 1 && (
         <>
-          <div className="absolute bottom-4 left-0 right-0 flex justify-center gap-2">
+          <div className="absolute bottom-4 left-0 right-0 flex justify-center gap-2 z-20">
             {project.images.map((_, index) => (
               <button
                 key={index}
@@ -36,8 +45,9 @@ export default function ModalImageCarousel({ project }) {
             ))}
           </div>
 
+          {/* Flechas */}
           <button
-            className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black/30 text-white p-3 rounded-full hover:bg-black/50 transition-colors"
+            className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black/30 text-white p-3 rounded-full hover:bg-black/50 transition-colors z-20"
             onClick={prevModalImage}
             aria-label="Imagen anterior"
           >
@@ -45,7 +55,7 @@ export default function ModalImageCarousel({ project }) {
           </button>
 
           <button
-            className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black/30 text-white p-3 rounded-full hover:bg-black/50 transition-colors"
+            className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black/30 text-white p-3 rounded-full hover:bg-black/50 transition-colors z-20"
             onClick={nextModalImage}
             aria-label="Siguiente imagen"
           >
