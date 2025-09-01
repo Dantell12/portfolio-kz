@@ -5,7 +5,11 @@ import { useTranslation } from "react-i18next";
 import { FiLogOut } from "react-icons/fi";
 import { useExperiences } from "./experiences";
 import { useSectionTracking } from "../../hooks/useSectionTracking";
-import { trackExperienceDemo, trackExperienceExpand, trackExperienceView } from "../../analytics";
+import {
+  trackExperienceDemo,
+  trackExperienceExpand,
+  trackExperienceView,
+} from "../../analytics";
 
 export default function Experience() {
   const { t } = useTranslation();
@@ -33,13 +37,13 @@ export default function Experience() {
     e.preventDefault();
     e.stopPropagation();
     trackExperienceDemo(exp.company);
-    window.open(exp.demo, '_blank', 'noopener,noreferrer');
+    window.open(exp.demo, "_blank", "noopener,noreferrer");
   };
 
   // Función para mostrar más/menos experiencias
   const handleShowAllToggle = () => {
     const newShowAll = !showAll;
-    trackExperienceExpand(newShowAll ? 'expand' : 'collapse');
+    trackExperienceExpand(newShowAll ? "expand" : "collapse");
     setShowAll(newShowAll);
     if (newShowAll === false) {
       scrollToSection("exp");
@@ -161,7 +165,11 @@ export default function Experience() {
             <button
               onClick={handleShowAllToggle}
               className="px-5 py-3 bg-accent/10 hover:bg-accent/20 text-accent font-medium rounded-xl shadow transition-colors"
-              aria-label={showAll ? "Mostrar menos experiencias" : "Mostrar más experiencias"}
+              aria-label={
+                showAll
+                  ? "Mostrar menos experiencias"
+                  : "Mostrar más experiencias"
+              }
             >
               {showAll
                 ? t("experience.viewLess", { defaultValue: "Ver menos" })
@@ -176,10 +184,11 @@ export default function Experience() {
         <AnimatePresence>
           {open && (
             <motion.div
+              i
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              className="fixed inset-0 z-50 flex items-center justify-center p-4"
+              className="fixed inset-0 z-110 flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm"
               onClick={() => setOpen(null)}
             >
               <motion.div

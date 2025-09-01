@@ -186,10 +186,10 @@ const STATIC_PROJECTS_DATA = [
     problemKey: "projects.email.problem",
     solutionKey: "projects.email.solution",
     featuresKeys: [
-      "projects.emailo.features.1",
-      "projects.emailo.features.2",
-      "projects.emailo.features.3",
-      "projects.emailo.features.4",
+      "projects.email.features.1",
+      "projects.email.features.2",
+      "projects.email.features.3",
+      "projects.email.features.4",
     ],
     challengesKeys: [
       "projects.email.challenges.1",

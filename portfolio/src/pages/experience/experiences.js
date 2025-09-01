@@ -12,56 +12,6 @@ export const useExperiences = () => {
   return useMemo(
     () => [
       {
-        id: "etyrse",
-        company: "Etyrse.net",
-        role: t("experience.etyrse.role", {
-          defaultValue: "Desarrollador Full Stack",
-        }),
-        location: t("experience.etyrse.location", {
-          defaultValue: "Machala, Ecuador",
-        }),
-        period: t("experience.etyrse.period", {
-          defaultValue: "May 2024 — Aug 2024",
-        }),
-        short: t("experience.etyrse.short", {
-          defaultValue:
-            "Sistema integral para ISP: facturación electrónica, mapeo de clientes y panel administrativo.",
-        }),
-        bullets: [
-          t("experience.etyrse.bullets.0", {
-            defaultValue: "Integración con SRI para comprobantes.",
-          }),
-          t("experience.etyrse.bullets.1", {
-            defaultValue: "Mapeo interactivo con Leaflet.",
-          }),
-          t("experience.etyrse.bullets.2", {
-            defaultValue: "Arquitectura microservicios dockerizados.",
-          }),
-        ],
-        allBullets: [
-          t("experience.etyrse.allBullets.0", {
-            defaultValue: "Integración con SRI.",
-          }),
-          t("experience.etyrse.allBullets.1", {
-            defaultValue: "Registro de empleados con Cloudinary.",
-          }),
-          t("experience.etyrse.allBullets.2", {
-            defaultValue: "Leaflet para geolocalización.",
-          }),
-          t("experience.etyrse.allBullets.3", {
-            defaultValue: "Microservicios dockerizados + API Gateway.",
-          }),
-          t("experience.etyrse.allBullets.4", {
-            defaultValue: "Autenticación JWT, PostgreSQL optimizado.",
-          }),
-          t("experience.etyrse.allBullets.5", {
-            defaultValue: "Despliegues: Vercel, Railway, Supabase, cPanel.",
-          }),
-        ],
-        demo: "https://icontrol-app-isp-lilac.vercel.app",
-        icon: FaLaptopCode,
-      },
-      {
         id: "gadm",
         company: t("experience.gadm.company", { defaultValue: "GAD Machala" }),
         role: t("experience.gadm.role", {
@@ -188,6 +138,55 @@ export const useExperiences = () => {
           }),
         ],
         icon: FaServer,
+      },
+      {
+        id: "etyrse",
+        company: "Etyrse.net",
+        role: t("experience.etyrse.role", {
+          defaultValue: "Desarrollador Full Stack",
+        }),
+        location: t("experience.etyrse.location", {
+          defaultValue: "Machala, Ecuador",
+        }),
+        period: t("experience.etyrse.period", {
+          defaultValue: "May 2024 — Aug 2024",
+        }),
+        short: t("experience.etyrse.short", {
+          defaultValue:
+            "Sistema integral para ISP: facturación electrónica, mapeo de clientes y panel administrativo.",
+        }),
+        bullets: [
+          t("experience.etyrse.bullets.0", {
+            defaultValue: "Integración con SRI para comprobantes.",
+          }),
+          t("experience.etyrse.bullets.1", {
+            defaultValue: "Mapeo interactivo con Leaflet.",
+          }),
+          t("experience.etyrse.bullets.2", {
+            defaultValue: "Arquitectura microservicios dockerizados.",
+          }),
+        ],
+        allBullets: [
+          t("experience.etyrse.allBullets.0", {
+            defaultValue: "Integración con SRI.",
+          }),
+          t("experience.etyrse.allBullets.1", {
+            defaultValue: "Registro de empleados con Cloudinary.",
+          }),
+          t("experience.etyrse.allBullets.2", {
+            defaultValue: "Leaflet para geolocalización.",
+          }),
+          t("experience.etyrse.allBullets.3", {
+            defaultValue: "Microservicios dockerizados + API Gateway.",
+          }),
+          t("experience.etyrse.allBullets.4", {
+            defaultValue: "Autenticación JWT, PostgreSQL optimizado.",
+          }),
+          t("experience.etyrse.allBullets.5", {
+            defaultValue: "Despliegues: Vercel, Railway, Supabase, cPanel.",
+          }),
+        ],
+        icon: FaLaptopCode,
       },
     ],
     [t]

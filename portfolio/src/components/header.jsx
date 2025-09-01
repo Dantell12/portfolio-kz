@@ -35,7 +35,7 @@ export default function Header() {
   ];
 
   return (
-    <header className="sticky top-0 z-50 transition-colors duration-300">
+    <header className="sticky top-0 z-100 transition-colors duration-300">
       <nav
         className={`border-b border-muted px-4 lg:px-6 py-3 
         ${

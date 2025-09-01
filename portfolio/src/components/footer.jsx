@@ -54,7 +54,7 @@ export default function Footer() {
               rel="noopener noreferrer"
               title="GitHub"
               aria-label="GitHub — Kevin Zuñiga"
-              className="inline-flex items-center justify-center w-9 h-9 rounded-full bg-accent/30 dark:bg-accent dark:hover:bg-accent/50 hover:bg-accent/50 text-secondary transition"
+              className="inline-flex items-center justify-center w-9 h-9 rounded-full bg-surface/20 dark:bg-accent dark:hover:bg-accent/50 hover:bg-accent/50 text-secondary transition"
             >
               <FaGithub className="w-4 h-4 text-surface" />
             </a>
@@ -65,9 +65,9 @@ export default function Footer() {
               rel="noopener noreferrer"
               title="LinkedIn"
               aria-label="LinkedIn — Kevin Zuñiga"
-              className="inline-flex items-center justify-center w-9 h-9 rounded-full bg-accent/30 dark:bg-accent dark:hover:bg-accent/50 hover:bg-accent/50 text-secondary transition"
+              className="inline-flex items-center justify-center w-9 h-9 rounded-full bg-surface/20 dark:bg-accent  dark:hover:bg-accent/50 hover:bg-accent/50 text-secondary transition"
             >
-              <FaLinkedin className="w-4 h-4 text-surface" />
+              <FaLinkedin className="w-4 h-4 text-surface " />
             </a>
 
             <a
@@ -76,7 +76,7 @@ export default function Footer() {
               rel="noopener noreferrer"
               title="WhatsApp"
               aria-label="WhatsApp — Kevin Zuñiga"
-              className="inline-flex items-center justify-center w-9 h-9 rounded-full bg-accent/30 dark:bg-accent dark:hover:bg-accent/50 hover:bg-accent/50 text-secondary transition"
+              className="inline-flex items-center justify-center w-9 h-9 rounded-full bg-surface/20 dark:bg-accent dark:hover:bg-accent/50 hover:bg-accent/50 text-secondary transition"
             >
               <FaWhatsapp className="w-4 h-4 text-surface" />
             </a>
