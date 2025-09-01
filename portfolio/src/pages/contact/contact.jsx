@@ -3,25 +3,46 @@ import { motion } from "framer-motion";
 import { FaRegCopy, FaCheck, FaStar } from "react-icons/fa";
 import { useContacts } from "./contacts";
 import { useTranslation } from "react-i18next";
+import { useSectionTracking } from "../../hooks/useSectionTracking";
+import { trackContactClick } from "../../analytics";
 
-// ContactSection - actualizado: botón copiar y color en el ícono (no en el fondo)
 export default function ContactSection() {
   const [copied, setCopied] = useState(null);
+  const sectionRef = useSectionTracking("Contact");
 
-  const {t} = useTranslation();
+  const { t } = useTranslation();
   const contacts = useContacts();
-  const handleCopy = async (text, id) => {
+
+  const handleCopy = async (text, id, contactName) => {
     try {
       await navigator.clipboard.writeText(text);
       setCopied(id);
+
+      // Trackear evento de copiado
+      if (window.gtag) {
+        window.gtag("event", "copy", {
+          event_category: "Contact",
+          event_label: `Copy ${contactName}`,
+        });
+      }
+
       setTimeout(() => setCopied(null), 2000);
     } catch (e) {
       console.error("Copy failed", e);
     }
   };
 
+  const handleContactClick = (contactName, href) => {
+    // Trackear el clic en el contacto
+    trackContactClick(contactName);
+
+    // Abrir el enlace
+    window.open(href, "_blank", "noopener,noreferrer");
+  };
+
   return (
     <section
+      ref={sectionRef}
       id="contact"
       className="bg-bgsecondary dark:bg-bg min-h-[60vh] pt-15 sm:pt-20 lg:pt-25 py-12 px-4 sm:px-6 lg:px-8"
     >
@@ -73,26 +94,25 @@ export default function ContactSection() {
               }}
             >
               {/* botón copiar */}
+              {/* Botón copiar con tracking */}
               <div className="absolute right-4 top-4 flex items-center gap-2">
                 <button
-                  onClick={() => handleCopy(c.copyText, c.id)}
-                  className="flex items-center gap-2 px-2 py-2 rounded-lg text-sm bg-accent/10 hover:bg-accent/20"
+                  onClick={() => handleCopy(c.copyText, c.id, c.name)}
+                  className="flex items-center gap-2 px-2 py-2 rounded-lg text-sm bg-accent/10 hover:bg-accent/20 transition-colors"
                   aria-label={`Copiar ${c.name}`}
+                  title={copied === c.id ? "¡Copiado!" : `Copiar ${c.name}`}
                 >
                   {copied === c.id ? (
-                    <>
-                      <FaCheck className="w-4 h-4 text-accent/80" />
-                    </>
+                    <FaCheck className="w-4 h-4 text-accent/80" />
                   ) : (
-                    <>
-                      <FaRegCopy className="w-4 h-4 text-primary/70" />
-                    </>
+                    <FaRegCopy className="w-4 h-4 text-primary/70" />
                   )}
                 </button>
               </div>
 
               <a
                 href={c.href}
+                onClick={() => handleContactClick(c.name, c.href)}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-start gap-4"

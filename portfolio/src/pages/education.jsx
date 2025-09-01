@@ -8,8 +8,11 @@ import {
 import { useTranslation } from "react-i18next";
 import { useMemo } from "react";
 
+import { useSectionTracking } from "../hooks/useSectionTracking.jsx";
+
 export default function Education() {
   const { t } = useTranslation();
+  const sectionRef = useSectionTracking("Education");
 
   // progreso dinámico universidad
   const progressUniversidad = useMemo(() => {
@@ -26,6 +29,7 @@ export default function Education() {
   return (
     <section
       id="education"
+      ref={sectionRef}
       className="bg-gray-50 dark:bg-gray-900  min-h-[60vh] pt-15 sm:pt-20 lg:pt-25 py-12 px-4 sm:px-6 lg:px-8"
     >
       <div className="max-w-6xl mx-auto">

@@ -2,8 +2,25 @@
 import { motion, AnimatePresence } from "framer-motion";
 import ModalImageCarousel from "../Carousels/modalImageCarousel";
 import { FaExternalLinkAlt, FaFilePdf, FaGithub } from "react-icons/fa";
+import { trackProjectDemo, trackProjectCode, trackProjectDocument } from "../../analytics";
 
 export default function ModalDetailsProjects({ showDetailModal, selectedProject, onClose }) {
+  
+  const handleDemoClick = (projectName, demoUrl) => {
+    trackProjectDemo(projectName);
+    window.open(demoUrl, '_blank', 'noopener,noreferrer');
+  };
+
+  const handleCodeClick = (projectName, codeUrl) => {
+    trackProjectCode(projectName);
+    window.open(codeUrl, '_blank', 'noopener,noreferrer');
+  };
+
+  const handleDocumentClick = (projectName, documentUrl) => {
+    trackProjectDocument(projectName);
+    window.open(documentUrl, '_blank', 'noopener,noreferrer');
+  };
+
   return (
     <AnimatePresence>
       {showDetailModal && selectedProject && (
@@ -12,7 +29,7 @@ export default function ModalDetailsProjects({ showDetailModal, selectedProject,
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm"
-          onClick={onClose} // <-- pasar la referencia, no ejecutarla ahora
+          onClick={onClose}
         >
           <motion.div
             initial={{ scale: 0.95, opacity: 0 }}
@@ -29,6 +46,7 @@ export default function ModalDetailsProjects({ showDetailModal, selectedProject,
                 <button
                   onClick={onClose}
                   className="text-muted hover:text-primary transition-colors text-xl"
+                  aria-label="Cerrar modal"
                 >
                   ✕
                 </button>
@@ -100,42 +118,39 @@ export default function ModalDetailsProjects({ showDetailModal, selectedProject,
                 </div>
               </div>
 
-              {/* Botones de acción */}
+              {/* Botones de acción con analytics */}
               <div className="flex gap-3 mt-8">
                 {selectedProject.demoUrl && (
-                  <a
-                    href={selectedProject.demoUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                  <button
+                    onClick={() => handleDemoClick(selectedProject.title, selectedProject.demoUrl)}
                     className="inline-flex items-center gap-2 px-4 py-2 bg-accent text-white rounded-lg font-medium hover:bg-accent/90 transition-colors"
+                    aria-label={`Ver demo de ${selectedProject.title}`}
                   >
                     <FaExternalLinkAlt className="text-xs" />
                     Ver Demo
-                  </a>
+                  </button>
                 )}
 
                 {selectedProject.codeUrl && (
-                  <a
-                    href={selectedProject.codeUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                  <button
+                    onClick={() => handleCodeClick(selectedProject.title, selectedProject.codeUrl)}
                     className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-white/5 text-primary font-medium hover:bg-white/10 transition-colors"
+                    aria-label={`Ver código de ${selectedProject.title}`}
                   >
                     <FaGithub />
                     Ver Código
-                  </a>
+                  </button>
                 )}
 
                 {selectedProject.document && (
-                  <a
-                    href={selectedProject.document}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                  <button
+                    onClick={() => handleDocumentClick(selectedProject.title, selectedProject.document)}
                     className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-white/5 text-primary font-medium hover:bg-white/10 transition-colors"
+                    aria-label={`Ver documento de ${selectedProject.title}`}
                   >
                     <FaFilePdf />
                     Ver Documento
-                  </a>
+                  </button>
                 )}
               </div>
             </div>

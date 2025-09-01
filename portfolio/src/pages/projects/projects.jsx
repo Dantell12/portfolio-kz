@@ -8,12 +8,15 @@ import TechnologyStack from "../../components/Dropdowns/techDropdown";
 import ImageCarousel from "../../components/Carousels/imageCarousel";
 import ModalDetailsProjects from "../../components/Modals/modalDetailsProjects";
 import { useProjectsDetail } from "./projects_detail";
+import { useSectionTracking } from "../../hooks/useSectionTracking";
+import { trackProjectView } from "../../analytics";
 
 export default function Projects() {
   const { t } = useTranslation();
   const [selectedProject, setSelectedProject] = useState(null);
   const [showDetailModal, setShowDetailModal] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState({});
+  const sectionRef = useSectionTracking("Projects");
 
   const projects = useProjectsDetail();
 
@@ -28,6 +31,10 @@ export default function Projects() {
 
   const openProjectDetail = (project, e) => {
     if (e) e.stopPropagation();
+    
+    // Trackear que vieron el proyecto
+    trackProjectView(project.title);
+    
     setSelectedProject(project);
     setShowDetailModal(true);
   };
@@ -41,6 +48,7 @@ export default function Projects() {
   return (
     <section
       id="projects"
+      ref={sectionRef}
       className="bg-bgsecondary dark:bg-bg min-h-screen pt-25 py-12 px-4 sm:px-6 lg:px-8"
     >
       <div className="max-w-6xl mx-auto">
@@ -80,8 +88,16 @@ export default function Projects() {
               transition={{ duration: 0.5 }}
               viewport={{ once: true }}
               onClick={() => openProjectDetail(project)}
-              className="group relative z-0 hover:z-50 focus:z-50 bg-surface backdrop-blur-3xl rounded-2xl shadow-lg overflow-visible flex flex-col h-full transition-transform duration-500 hover:scale-105 hover:border-accent hover:border-2 hover:shadow-lg hover:shadow-accent"
+              className="group relative z-0 hover:z-50 focus:z-50 bg-surface backdrop-blur-3xl rounded-2xl shadow-lg overflow-visible flex flex-col h-full transition-transform duration-500 hover:scale-105 hover:border-accent hover:border-2 hover:shadow-lg hover:shadow-accent cursor-pointer"
               tabIndex={0}
+              role="button"
+              aria-label={`Ver detalles del proyecto ${project.title}`}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                  e.preventDefault();
+                  openProjectDetail(project, e);
+                }
+              }}
             >
               {/* Carrusel de imágenes del proyecto */}
               <ImageCarousel project={project} />
@@ -118,6 +134,7 @@ export default function Projects() {
                       <button
                         onClick={(e) => openProjectDetail(project, e)}
                         className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2 bg-accent text-white rounded-lg font-medium hover:bg-accent/90 transition-colors text-sm"
+                        aria-label={`Ver detalles de ${project.title}`}
                       >
                         <FaCode className="text-xs" />
                         Ver detalles

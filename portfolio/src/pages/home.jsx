@@ -15,10 +15,24 @@ import Education from "./education";
 import Experience from "./experience/experience";
 import ContactSection from "./contact/contact";
 import Projects from "./projects/projects";
+import { trackCVDownload, trackSocialClick } from "../analytics";
 
 export default function Home() {
   const { t } = useTranslation();
   const urlCV = t("urlcv");
+
+  // Función para manejar descarga de CV
+  const handleCVDownload = () => {
+    trackCVDownload();
+    window.open(urlCV, "_blank");
+  };
+
+  // Función para manejar clics en redes sociales
+  const handleSocialClick = (platform, url) => {
+    trackSocialClick(platform);
+    window.open(url, "_blank");
+  };
+
   return (
     <>
       <Header />
@@ -55,65 +69,68 @@ export default function Home() {
               {t("subtitle")}
             </p>
 
-            {/* Enlace */}
-            {/* Enlace CV + iconos sociales a la derecha */}
+            {/* Enlace CV + iconos sociales */}
             <div className="mt-6 w-full flex flex-wrap sm:flex-nowrap items-center gap-4">
-              {/* Botón CV */}
-              <a
-                href={urlCV}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-3 px-4 py-2 rounded-lg bg-accent text-white font-medium shadow hover:bg-accent/90"
+              {/* Botón CV con tracking */}
+              <button
+                onClick={handleCVDownload}
+                className="inline-flex items-center gap-3 px-4 py-2 rounded-lg bg-accent text-white font-medium shadow hover:bg-accent/90 transition-colors"
               >
                 <FaDownload /> {t("mycv", { defaultValue: "Mi Curriculum" })}
-              </a>
+              </button>
 
-              {/* Spacer flexible: empuja los iconos a la derecha */}
+              {/* Spacer flexible */}
               <div className="flex-1" />
 
-              {/* Iconos sociales (se envuelven si pantalla pequeña) */}
+              {/* Iconos sociales con tracking */}
               <div className="flex items-center gap-2">
-                <motion.a
+                <motion.button
                   whileHover={{ scale: 1.08 }}
                   whileTap={{ scale: 0.95 }}
                   transition={{ type: "spring", stiffness: 400, damping: 24 }}
-                  href="https://github.com/Dantell12"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  onClick={() =>
+                    handleSocialClick("GitHub", "https://github.com/Dantell12")
+                  }
                   aria-label="GitHub — Kevin Zuñiga"
                   title="GitHub"
                   className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/5 hover:bg-accent/10 text-secondary transition"
                 >
                   <FaGithub className="w-5 h-5" />
-                </motion.a>
+                </motion.button>
 
-                <motion.a
+                <motion.button
                   whileHover={{ scale: 1.08 }}
                   whileTap={{ scale: 0.95 }}
                   transition={{ type: "spring", stiffness: 400, damping: 24 }}
-                  href="https://www.linkedin.com/in/joel-zuniga-223b44325"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  onClick={() =>
+                    handleSocialClick(
+                      "LinkedIn",
+                      "https://www.linkedin.com/in/joel-zuniga-223b44325"
+                    )
+                  }
                   aria-label="LinkedIn — Kevin Zuñiga"
                   title="LinkedIn"
                   className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/5 hover:bg-accent/10 text-secondary transition"
                 >
                   <FaLinkedin className="w-5 h-5" />
-                </motion.a>
+                </motion.button>
 
-                <motion.a
+                <motion.button
                   whileHover={{ scale: 1.08 }}
                   whileTap={{ scale: 0.95 }}
                   transition={{ type: "spring", stiffness: 400, damping: 24 }}
-                  href="https://wa.me/+593979674382?text=Hola%20Kevin%20!%20Quisiera%20contactarte"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  onClick={() =>
+                    handleSocialClick(
+                      "WhatsApp",
+                      "https://wa.me/+593979674382?text=Hola%20Kevin%20!%20Quisiera%20contactarte"
+                    )
+                  }
                   aria-label="WhatsApp — Kevin Zuñiga"
                   title="WhatsApp"
                   className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/5 hover:bg-accent/10 text-secondary transition"
                 >
                   <FaWhatsapp className="w-5 h-5" />
-                </motion.a>
+                </motion.button>
               </div>
             </div>
           </div>
@@ -123,17 +140,16 @@ export default function Home() {
             <img
               src="/me.png"
               alt="Kevin Zuñiga"
-              className="w-full max-w-2xl rounded-2xl  object-cover"
+              className="w-full max-w-2xl rounded-2xl object-cover"
             />
           </div>
         </div>
       </section>
-      {/*Skill */}
+
+      {/* Componentes con IDs para el tracking de secciones */}
       <Skills />
-      {/*Proyectos */}
       <Projects />
       <Experience />
-      {/*Sobre mi */}
       <About />
       <Education />
       <ContactSection />

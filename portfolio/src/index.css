@@ -8,9 +8,9 @@
   --color-accent: #22c55e; /* Verde vibrante (acento) */
   --color-muted: #334155; /* Gris azulado apagado */
   --color-bg2: #0c0f0a; /* Fondo alternativo oscuro */
-  --color-bgsecondary: #F2F2F2;
+  --color-bgsecondary: #f2f2f2;
 }
-html{
+html {
   scroll-behavior: smooth;
 }
 /* Dark mode refinado */
@@ -25,3 +25,18 @@ html{
 
 @import "swiper/css";
 @import "swiper/css/navigation"; /* Fuerza a Swiper a no recortar */
+
+/* Optimización de rendimiento */
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Evitar layout shifts */
+.motion-div {
+  will-change: transform;
+}

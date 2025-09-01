@@ -1,12 +1,8 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import {
-  FaUserAlt,
-  FaLightbulb,
-  FaCogs,
-  FaStar,
-} from "react-icons/fa";
+import { FaUserAlt, FaLightbulb, FaCogs, FaStar } from "react-icons/fa";
 import { useTranslation } from "react-i18next";
+import { useSectionTracking } from "../hooks/useSectionTracking";
 
 function TimelineItem({ date, title, children, highlight }) {
   return (
@@ -52,10 +48,12 @@ function StatCard({ title, value, icon: Icon }) {
 export default function About() {
   const { t } = useTranslation();
   const [openLong, setOpenLong] = useState(false);
+  const sectionRef = useSectionTracking("About");
 
   return (
     <>
       <section
+        ref={sectionRef}
         className="bg-bgsecondary dark:bg-bg min-h-screen pt-25 py-12 px-4 sm:px-6 lg:px-8"
         id="about"
       >
@@ -75,8 +73,8 @@ export default function About() {
             transition={{ duration: 0.5, delay: 0.2 }}
             viewport={{ once: true }}
             className="mt-3 text-lg sm:text-lg lg:text-xl font-semibold text-muted dark:text-primary/80 mx-auto mb-6"
-          >{t("about.subtitle")}
-            
+          >
+            {t("about.subtitle")}
           </motion.p>
         </div>
         <div className="max-w-6xl mx-auto grid gap-10 lg:grid-cols-3">
@@ -166,10 +164,10 @@ export default function About() {
 
           {/* RIGHT: Timeline + Details */}
           <motion.section
-             initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              viewport={{ once: true }}
+            initial={{ opacity: 0, x: 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            viewport={{ once: true }}
             className="lg:col-span-2 bg-surface backdrop-blur-3xl rounded-2xl p-6 shadow-lg"
           >
             <h2 className="text-2xl font-bold text-primary mb-2">

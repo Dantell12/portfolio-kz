@@ -4,11 +4,14 @@ import { FaExternalLinkAlt, FaHammer } from "react-icons/fa";
 import { useTranslation } from "react-i18next";
 import { FiLogOut } from "react-icons/fi";
 import { useExperiences } from "./experiences";
+import { useSectionTracking } from "../../hooks/useSectionTracking";
+import { trackExperienceDemo, trackExperienceExpand, trackExperienceView } from "../../analytics";
 
 export default function Experience() {
   const { t } = useTranslation();
   const [open, setOpen] = useState(null);
   const [showAll, setShowAll] = useState(false);
+  const sectionRef = useSectionTracking("Experience");
 
   const scrollToSection = (sectionId) => {
     const el = document.getElementById(sectionId);
@@ -19,8 +22,33 @@ export default function Experience() {
 
   const experiences = useExperiences();
 
+  // Función para abrir modal de experiencia con tracking
+  const handleViewMore = (exp) => {
+    trackExperienceView(exp.company);
+    setOpen(exp);
+  };
+
+  // Función para manejar demo con tracking
+  const handleDemoClick = (exp, e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    trackExperienceDemo(exp.company);
+    window.open(exp.demo, '_blank', 'noopener,noreferrer');
+  };
+
+  // Función para mostrar más/menos experiencias
+  const handleShowAllToggle = () => {
+    const newShowAll = !showAll;
+    trackExperienceExpand(newShowAll ? 'expand' : 'collapse');
+    setShowAll(newShowAll);
+    if (newShowAll === false) {
+      scrollToSection("exp");
+    }
+  };
+
   return (
     <section
+      ref={sectionRef}
       id="exp"
       className="bg-gray-50 dark:bg-gray-900 min-h-[60vh] pt-15 sm:pt-20 lg:pt-25 py-12 px-4 sm:px-6 lg:px-8"
     >
@@ -104,21 +132,21 @@ export default function Experience() {
 
                     <div className="mt-4 flex items-center gap-3">
                       <button
-                        onClick={() => setOpen(exp)}
-                        className="inline-flex items-center gap-2 px-3 py-2 rounded-lg bg-accent text-white text-sm font-medium shadow hover:bg-accent/90"
+                        onClick={() => handleViewMore(exp)}
+                        className="inline-flex items-center gap-2 px-3 py-2 rounded-lg bg-accent text-white text-sm font-medium shadow hover:bg-accent/90 transition-colors"
+                        aria-label={`Ver más detalles de ${exp.company}`}
                       >
                         {t("experience.viewMore", { defaultValue: "Ver más" })}
                       </button>
                       {exp.demo && (
-                        <a
-                          href={exp.demo}
-                          target="_blank"
-                          rel="noreferrer"
-                          className="inline-flex items-center gap-2 px-3 py-2 rounded-lg bg-white/5 text-primary text-sm font-medium shadow hover:bg-white/10"
+                        <button
+                          onClick={(e) => handleDemoClick(exp, e)}
+                          className="inline-flex items-center gap-2 px-3 py-2 rounded-lg bg-white/5 text-primary text-sm font-medium shadow hover:bg-white/10 transition-colors"
+                          aria-label={`Ver demo de ${exp.company}`}
                         >
                           <FaExternalLinkAlt />{" "}
                           {t("experience.demo", { defaultValue: "Demo" })}
-                        </a>
+                        </button>
                       )}
                     </div>
                   </div>
@@ -131,11 +159,9 @@ export default function Experience() {
         {experiences.length > 2 && (
           <div className="mt-10 text-center">
             <button
-              onClick={() => {
-                setShowAll(!showAll);
-                if (showAll) scrollToSection("exp");
-              }}
-              className="px-5 py-3 bg-accent/10 hover:bg-accent/20 text-accent font-medium rounded-xl shadow"
+              onClick={handleShowAllToggle}
+              className="px-5 py-3 bg-accent/10 hover:bg-accent/20 text-accent font-medium rounded-xl shadow transition-colors"
+              aria-label={showAll ? "Mostrar menos experiencias" : "Mostrar más experiencias"}
             >
               {showAll
                 ? t("experience.viewLess", { defaultValue: "Ver menos" })
@@ -154,6 +180,7 @@ export default function Experience() {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               className="fixed inset-0 z-50 flex items-center justify-center p-4"
+              onClick={() => setOpen(null)}
             >
               <motion.div
                 initial={{ scale: 0.98, y: 10 }}
@@ -163,6 +190,7 @@ export default function Experience() {
                 className="max-w-3xl w-full bg-white/90 dark:bg-white/5 rounded-2xl p-6 shadow-xl backdrop-blur-3xl"
                 role="dialog"
                 aria-modal="true"
+                onClick={(e) => e.stopPropagation()}
               >
                 <div className="flex-1">
                   <h3 className="text-xl font-bold text-accent dark:text-accent">
@@ -179,18 +207,17 @@ export default function Experience() {
 
                   <div className="mt-6 flex items-center gap-3">
                     {open.demo && (
-                      <a
-                        href={open.demo}
-                        target="_blank"
-                        rel="noreferrer"
-                        className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-accent text-white font-medium shadow hover:bg-accent/90"
+                      <button
+                        onClick={(e) => handleDemoClick(open, e)}
+                        className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-accent text-white font-medium shadow hover:bg-accent/90 transition-colors"
                       >
                         {t("experience.viewDemo", { defaultValue: "Ver demo" })}
-                      </a>
+                      </button>
                     )}
                     <button
                       onClick={() => setOpen(null)}
-                      className="ml-auto gap-2 px-3 py-2 rounded-lg  font-medium shadow bg-gray-500 dark:bg-muted text-primary hover:bg-muted/50 inline-flex items-center"
+                      className="ml-auto gap-2 px-3 py-2 rounded-lg font-medium shadow bg-gray-500 dark:bg-muted text-primary hover:bg-muted/50 inline-flex items-center transition-colors"
+                      aria-label="Cerrar modal"
                     >
                       <FiLogOut className="ml-1" />
                     </button>

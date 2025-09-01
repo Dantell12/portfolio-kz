@@ -22,6 +22,7 @@ import {
   TypeScriptIcon,
 } from "../assets/icons.tsx";
 import { useTranslation } from "react-i18next";
+import { useSectionTracking } from "../hooks/useSectionTracking.jsx";
 const skills = [
   { name: "React", icon: FaReact },
   { name: "Angular", icon: FaAngular },
@@ -45,9 +46,12 @@ const skills = [
 
 export default function Skills() {
   const { t } = useTranslation();
+  const sectionRef = useSectionTracking("Skills");
+
   return (
     <section
       aria-labelledby="skills-title"
+      ref={sectionRef}
       className="bg-gray-50 dark:bg-gray-900  min-h-[60vh] pt-15 sm:pt-20 lg:pt-25 py-12 px-4 sm:px-6 lg:px-8"
       id="skills"
     >
