@@ -12,12 +12,13 @@ import { useTranslation } from "react-i18next";
 import About from "./about";
 import { motion } from "framer-motion";
 import Education from "./education";
-import Experience from "./experience";
-import ContactSection from "./contact";
+import Experience from "./experience/experience";
+import ContactSection from "./contact/contact";
 import Projects from "./projects/projects";
 
 export default function Home() {
   const { t } = useTranslation();
+  const urlCV = t("urlcv");
   return (
     <>
       <Header />
@@ -59,7 +60,7 @@ export default function Home() {
             <div className="mt-6 w-full flex flex-wrap sm:flex-nowrap items-center gap-4">
               {/* Botón CV */}
               <a
-                href="https://drive.google.com/file/d/1YFDhfXnRlJMdt2DYowwoV8r9hw51KP79/view?usp=sharing"
+                href={urlCV}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-3 px-4 py-2 rounded-lg bg-accent text-white font-medium shadow hover:bg-accent/90"

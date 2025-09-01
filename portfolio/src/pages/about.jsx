@@ -67,7 +67,7 @@ export default function About() {
             viewport={{ once: true }}
             className="text-3xl lg:text-4xl inline-flex items-center font-bold text-accent dark:text-accent"
           >
-            <FaStar className="mr-1" /> Conóceme
+            <FaStar className="mr-1" /> {t("about.title1")}
           </motion.h2>
           <motion.p
             initial={{ opacity: 0 }}
@@ -75,8 +75,8 @@ export default function About() {
             transition={{ duration: 0.5, delay: 0.2 }}
             viewport={{ once: true }}
             className="mt-3 text-lg sm:text-lg lg:text-xl font-semibold text-muted dark:text-primary/80 mx-auto mb-6"
-          >
-            ¿Quieres saber más sobre mi?
+          >{t("about.subtitle")}
+            
           </motion.p>
         </div>
         <div className="max-w-6xl mx-auto grid gap-10 lg:grid-cols-3">

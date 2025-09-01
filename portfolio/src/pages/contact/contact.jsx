@@ -1,82 +1,15 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import {
-  FaGithub,
-  FaEnvelope,
-  FaGlobe,
-  FaWhatsapp,
-  FaLinkedin,
-  FaInstagram,
-  FaRegCopy,
-  FaCheck,
-  FaStar,
-} from "react-icons/fa";
-import { HiOutlineMail } from "react-icons/hi";
+import { FaRegCopy, FaCheck, FaStar } from "react-icons/fa";
+import { useContacts } from "./contacts";
+import { useTranslation } from "react-i18next";
 
 // ContactSection - actualizado: botón copiar y color en el ícono (no en el fondo)
 export default function ContactSection() {
   const [copied, setCopied] = useState(null);
 
-  const contacts = [
-    {
-      id: "github",
-      name: "GitHub",
-      href: "https://github.com/Dantell12",
-      copyText: "https://github.com/Dantell12",
-      description: "Proyectos Open Source.",
-      Icon: FaGithub,
-      // color para el icono (no background)
-      bgClass: "bg-[#2F3C50]",
-    },
-    {
-      id: "email",
-      name: "Email",
-      href: "mailto:joelkevin387@gmail.com",
-      copyText: "joelkevin387@gmail",
-      description: "Comunicación Directa.",
-      Icon: HiOutlineMail,
-      bgClass: "bg-[#D62331]",
-    },
-    {
-      id: "website",
-      name: "Website",
-      href: "https://portfolio-kevin-zuniga.vercel.app",
-      copyText: "https://portfolio-kevin-zuniga.vercel.app",
-      description: "Portafolio y Blog.",
-      Icon: FaGlobe,
-      bgClass: "bg-[#069269]",
-    },
-    {
-      id: "whatsapp",
-      name: "WhatsApp",
-      href: "https://wa.me/+593979674382?text=Hola%20Kevin%20!%20Quisiera%20contactarte",
-      copyText:
-        "https://wa.me/+593979674382?text=Hola%20Kevin%20!%20Quisiera%20contactarte",
-      description: "Chatea conmigo",
-      Icon: FaWhatsapp,
-      bgClass: "bg-[#21BE5B]",
-    },
-    {
-      id: "linkedin",
-      name: "LinkedIn",
-      href: "https://www.linkedin.com/in/joel-zuniga-223b44325/",
-      copyText: "https://www.linkedin.com/in/joel-zuniga-223b44325/",
-      description: "Red Profesional",
-      Icon: FaLinkedin,
-      bgClass: "bg-[#245CDF]",
-    },
-    {
-      id: "instagram",
-      name: "Instagram",
-      href: "https://instagram.com/joel_gsx",
-      copyText: "https://instagram.com/joel_gsx",
-      description: "Conóceme",
-      Icon: FaInstagram,
-      bgClass:
-        "bg-gradient-to-tr from-[#F8CE02] via-[#F87502] via-[#F92301] via-[#E11438] via-[#BF2E7B] via-[#934AC7] via-[#8842BC] to-[#7C3AAD]", // para instagram usamos gradiente en el ícono
-    },
-  ];
-
+  const {t} = useTranslation();
+  const contacts = useContacts();
   const handleCopy = async (text, id) => {
     try {
       await navigator.clipboard.writeText(text);
@@ -101,7 +34,7 @@ export default function ContactSection() {
             viewport={{ once: true }}
             className="text-3xl lg:text-4xl inline-flex items-center font-bold text-accent dark:text-accent"
           >
-            <FaStar className="mr-1" /> Conectemonos
+            <FaStar className="mr-1" /> {t("contacts.title")}
           </motion.h2>{" "}
           <motion.p
             initial={{ opacity: 0 }}
@@ -110,7 +43,7 @@ export default function ContactSection() {
             viewport={{ once: true }}
             className="text-5xl sm:text-6xl lg:text-7xl font-bold text-muted dark:text-primary/80 mb-6"
           >
-            ¿Listo para construir algo grandioso?
+            {t("contacts.subtitle")}
           </motion.p>
           <motion.p
             initial={{ opacity: 0 }}
@@ -119,9 +52,7 @@ export default function ContactSection() {
             viewport={{ once: true }}
             className="text-lg sm:text-lg lg:text-xl text-muted mt-2 mb-6"
           >
-            Busco activamente nuevas oportunidades donde pueda contribuir,
-            crecer y generar un impacto. Conectémonos y creemos algo
-            extraordinario juntos.
+            {t("contacts.parraph")}
           </motion.p>
         </div>
 

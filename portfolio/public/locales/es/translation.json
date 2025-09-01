@@ -20,7 +20,7 @@
   "welcome2": "Hola, soy",
   "subtitle": "Desarrollador Full Stack Junior",
   "mycv": "Mi Curriculum",
-
+  "urlcv": "https://drive.google.com/file/d/1YFDhfXnRlJMdt2DYowwoV8r9hw51KP79/view?usp=sharing",
   "---SKILL---": "",
   "projectsProfessional": "Proyectos profesionales",
   "projectsAcademic": "Experiencia académica",
@@ -156,7 +156,19 @@
       ]
     }
   },
-
+  "about.title1": "Conóceme",
+  "about.subtitle": "¿Quieres saber más sobre mi?",
+  "contacts": {
+    "github": "Proyectos Open Source.",
+    "email": "Comunicación Directa.",
+    "portfolio": "Portafolio y Blog.",
+    "whats": "Chatea conmigo.",
+    "linkedin": "Red Profesional.",
+    "ig": "Conóceme.",
+    "title": "Conectemonos!",
+    "subtitle": "¿Listo para construir algo grandioso?",
+    "parraph": "Busco activamente nuevas oportunidades donde pueda contribuir, crecer y generar un impacto. Conectémonos y creemos algo extraordinario juntos."
+  },
   "projects": {
     "title": "Proyectos Notables",
     "subtitle": "Algunos de mis trabajos recientes donde aplico mis conocimientos en desarrollo web.",

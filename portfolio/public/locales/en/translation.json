@@ -21,7 +21,7 @@
   "welcome2": "Hello, I'm",
   "subtitle": "Full Stack Junior Developer",
   "mycv": "My Resume",
-
+  "urlcv": "https://drive.google.com/file/d/17fWGqf7prReTzFaDSUJ7hw3h-8jryAZj/view?usp=sharing",
   "---SKILL---": "",
   "projectsProfessional": "Professional projects",
   "projectsAcademic": "Academic experience",
@@ -75,6 +75,19 @@
   "education.highschool.description": "Secondary education with specialization in science.",
   "education.progress.finished": "Completed",
 
+  "contacts": {
+    "github": "Open Source Projects.",
+    "email": "Direct Communication.",
+    "portfolio": "Portfolio and Blog.",
+    "whats": "Chat with me",
+    "linkedin": "Professional Network",
+    "ig": "Get to know me!",
+    "title": "Let's Connect!",
+    "subtitle": "Ready to Build Something Great?",
+    "parraph": "I actively seek out new opportunities where I can contribute, grow, and make an impact. Let's connect and create something extraordinary together."
+  },
+  "about.title1": "Get to know me",
+  "about.subtitle": "Do you want to know more about me?",
   "experience": {
     "title": "Work Experience",
     "lead": "Professional background in real projects, support and deployments.",

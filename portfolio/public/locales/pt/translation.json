@@ -21,7 +21,7 @@
   "welcome2": "Olá, sou",
   "subtitle": "Desenvolvedor Full Stack Júnior",
   "mycv": "Meu Currículo",
-
+  "urlcv": "https://drive.google.com/file/d/17fWGqf7prReTzFaDSUJ7hw3h-8jryAZj/view?usp=sharing",
   "---SKILL---": "",
   "projectsProfessional": "Projetos profissionais",
   "projectsAcademic": "Experiência acadêmica",
@@ -73,7 +73,19 @@
   "education.highschool.degree": "Bacharelado em Ciências",
   "education.highschool.description": "Formação secundária com especialização em ciências.",
   "education.progress.finished": "Concluído",
-
+  "contacts": {
+    "github": "Projetos Open Source.",
+    "email": "Comunicação Direta.",
+    "portfolio": "Portfólio e Blog.",
+    "whats": "Converse comigo",
+    "linkedin": "Rede Profissional",
+    "ig": "Conheça-me!",
+    "title": "Vamos nos conectar!",
+    "subtitle": "Pronto para construir algo grandioso?",
+    "parraph": "Busco ativamente novas oportunidades onde possa contribuir, crescer e causar impacto. Vamos nos conectar e criar algo extraordinário juntos."
+  },
+  "about.title1": "Conheça-me",
+  "about.subtitle": "Quer saber mais sobre mim?",
   "experience": {
     "title": "Work Experience",
     "lead": "Professional background in real projects, support and deployments.",
