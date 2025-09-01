@@ -7,15 +7,17 @@ import {
   FaLinkedin,
   FaGithub,
 } from "react-icons/fa";
-import Skills from "./skills";
 import { useTranslation } from "react-i18next";
-import About from "./about";
 import { motion } from "framer-motion";
-import Education from "./education";
-import Experience from "./experience/experience";
-import ContactSection from "./contact/contact";
-import Projects from "./projects/projects";
 import { trackCVDownload, trackSocialClick } from "../analytics";
+import { lazy } from "react";
+
+const ProjectsComponent = lazy(() => import("./projects/projects"));
+const SkillsComponent = lazy(() => import("./skills"));
+const ExperienceComponent = lazy(() => import("./experience/experience"));
+const AboutComponent = lazy(() => import("./about"));
+const EducationComponent = lazy(() => import("./education"));
+const ContactSectionComponent = lazy(() => import("./contact/contact"));
 
 export default function Home() {
   const { t } = useTranslation();
@@ -147,12 +149,13 @@ export default function Home() {
       </section>
 
       {/* Componentes con IDs para el tracking de secciones */}
-      <Skills />
-      <Projects />
-      <Experience />
-      <About />
-      <Education />
-      <ContactSection />
+
+      <SkillsComponent />
+      <ProjectsComponent />
+      <ExperienceComponent />
+      <AboutComponent />
+      <EducationComponent />
+      <ContactSectionComponent />
       <Footer />
     </>
   );

@@ -1,9 +1,10 @@
-import { useEffect } from "react";
+import { lazy, useEffect } from "react";
 import { initGA, logPageView } from "./analytics";
 import "./App.css";
-import Home from "./pages/home";
 import "swiper/css";
 import "swiper/css/navigation";
+const HomeComponent = lazy(() => import("./pages/home"));
+
 function App() {
   useEffect(() => {
     initGA();
@@ -11,7 +12,7 @@ function App() {
   }, []);
   return (
     <>
-      <Home />
+      <HomeComponent />
     </>
   );
 }
