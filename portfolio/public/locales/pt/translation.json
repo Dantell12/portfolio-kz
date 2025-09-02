@@ -170,6 +170,7 @@
   },
 
   "projects": {
+    "viewDetails": "Ver Detalhes",
     "title": "Projetos Notáveis",
     "subtitle": "Alguns dos meus trabalhos recentes onde aplico meu conhecimento em desenvolvimento web.",
     "icontrol": {

@@ -137,7 +137,7 @@ export default function Projects() {
                         aria-label={`Ver detalles de ${project.title}`}
                       >
                         <FaCode className="text-xs" />
-                        Ver detalles
+                        {t("projects.viewDetails", { defaultValue: "Ver Detalles" })}
                       </button>
                     </div>
                   </div>

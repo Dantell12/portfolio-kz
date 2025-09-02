@@ -172,6 +172,7 @@
   },
 
   "projects": {
+    "viewDetails": "View Details",
     "title": "Featured Projects",
     "subtitle": "Some of my recent work where I apply my knowledge in web development.",
     "icontrol": {
