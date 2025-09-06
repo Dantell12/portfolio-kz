@@ -315,5 +315,15 @@
         "5": "Código publicado no GitHub como evidência do projeto"
       }
     }
+  },
+  "calendar_name": "Calendário",
+  "calendar": {
+    "title": "Calendário da Clínica Estética",
+    "subtitle": "Olá Jose! Coloquei o calendário aqui para que você possa verificar os eventos e disponibilidade, já que são muitos para revisar um por um",
+    "refresh": "Atualizar Calendário",
+    "refreshing": "Atualizando...",
+    "loading": "Carregando calendário...",
+    "lastUpdate": "Última atualização",
+    "autoRefreshInfo": "O calendário se atualiza automaticamente a cada 10 minutos. Você também pode atualizá-lo manualmente usando o botão acima."
   }
 }

@@ -317,5 +317,14 @@
         "5": "Code published on GitHub as project evidence"
       }
     }
-  }
+  },     "calendar_name": "Calendar",
+  "calendar": {
+      "title": "Aesthetic Clinic Calendar",
+      "subtitle": "Hello Jose! I've placed the calendar here so you can check events and availability, since there are quite a few to review one by one",
+      "refresh": "Refresh Calendar",
+      "refreshing": "Refreshing...",
+      "loading": "Loading calendar...",
+      "lastUpdate": "Last updated",
+      "autoRefreshInfo": "The calendar automatically updates every 10 minutes. You can also refresh it manually using the button above."
+    }
 }

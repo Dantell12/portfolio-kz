@@ -11,6 +11,7 @@ import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
 import { trackCVDownload, trackSocialClick } from "../analytics";
 import { lazy } from "react";
+import CalendarSection from "./calendar";
 
 const ProjectsComponent = lazy(() => import("./projects/projects"));
 const SkillsComponent = lazy(() => import("./skills"));

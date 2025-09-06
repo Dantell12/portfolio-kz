@@ -9,6 +9,8 @@ export default function Header() {
   const { t } = useTranslation();
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const isHomePage = location.pathname === "/";
+  const isCalendarPage = location.pathname === "/calendar" || location.pathname === "/calendario";
 
   // Detecta scroll
   useEffect(() => {
@@ -19,10 +21,11 @@ export default function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
   const menu = [
-    { name: t("home"), href: "#home" },
+    { name: t("home"), href: "/home" },
     { name: t("skls"), href: "#skills" },
     { name: t("about"), href: "#about" },
     { name: t("contact"), href: "#contact" },
+    { name: t("calendar_name"), href: "/calendar" },
     {
       name: "Profesional",
       children: [
