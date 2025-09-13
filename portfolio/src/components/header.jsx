@@ -10,7 +10,8 @@ export default function Header() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const isHomePage = location.pathname === "/";
-  const isCalendarPage = location.pathname === "/calendar" || location.pathname === "/calendario";
+  const isCalendarPage =
+    location.pathname === "/calendar" || location.pathname === "/calendario";
 
   // Detecta scroll
   useEffect(() => {
@@ -25,7 +26,6 @@ export default function Header() {
     { name: t("skls"), href: "#skills" },
     { name: t("about"), href: "#about" },
     { name: t("contact"), href: "#contact" },
-    { name: t("calendar_name"), href: "/calendar" },
     {
       name: "Profesional",
       children: [
